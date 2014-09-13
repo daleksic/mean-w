@@ -1,0 +1,312 @@
+.korisnik-header{
+     display: block;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+
+  /*  border-bottom: 1px solid gray;*/
+    box-sizing: border-box;
+}
+.korisnik-body{
+     display: block;
+    position: relative;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-y: auto;
+
+}
+.korisnik-nav-tabs{
+      display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+/*    background-color: gray;*/
+    list-style-type: none;
+
+}
+
+.korisnik_nav{
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    line-height: 50px;
+    top: 0;
+    left: 0;
+   /*   border: 1px solid gray;*/
+    float:left;
+    text-align: center;
+ /*   vertical-align: middle;*/
+}
+.korisnik_nav a{
+    font-size: 18pt;
+    text-decoration: none;
+    color:  #428bca;
+}
+.korisnik_nav:hover{
+
+     background-color: lightgray;
+    cursor: pointer;
+
+}
+.korisnik_nav a:hover{
+     color:  #428bca;
+    cursor: inherit;
+}
+.active-tab{
+
+     background-color: white;
+}
+.active-menu{
+
+
+     display: inline-block;
+    position: relative;
+    width: 25%;
+    height: 10%;
+    line-height: 40px;
+    top: 0;
+    left: 0;
+   /*   border: 1px solid gray;*/
+    float:left;
+    text-align: center;
+ /*   vertical-align: middle;*/
+      font-size: 14pt;
+    text-decoration: none;
+      background-color: #428bca;
+    color: white;
+/*  border-bottom: 1px solid #428bca;*/
+}
+.korisnik-nav-menu{
+
+       display: block;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+/*    background-color: gray;*/
+    list-style-type: none;
+ /*    border-bottom: 1px solid #428bca;*/
+}
+.korisnik_menu{
+
+      display: inline-block;
+    position: relative;
+    width: 25%;
+    height: 10%;
+    line-height: 40px;
+    top: 0;
+    left: 0;
+   /*   border: 1px solid gray;*/
+    float:left;
+    text-align: center;
+ /*   vertical-align: middle;*/
+      font-size: 14pt;
+    text-decoration: none;
+    color: #428bca;
+/*  border-bottom: 1px solid #428bca;*/
+
+}
+.korisnik_menu:hover{
+      background-color: #428bca;
+    cursor: pointer;
+    text-decoration: none;
+    color:  white;
+}
+.active-menu:hover{
+      background-color: #428bca;
+    cursor: pointer;
+    text-decoration: none;
+    color:  white;
+}
+/*.admin_menu a{
+    font-size: 14pt;
+    text-decoration: none;
+    color:  #428bca;
+}*/
+.korisnik-content{
+
+       display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  /*  background-color: gray;*/
+    overflow-y: auto;
+}
+
+
+.korisnici-table{
+
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+  /*  background-color: gray;*/
+
+}
+
+
+.korisnici-filter{
+
+
+     display: block;
+   position: relative;
+    width: 100%;
+    height: 10%;
+     overflow: hidden;
+   top: 0px;
+   margin: 0 auto;
+  border-bottom: 1px solid #e2e2e2;
+
+}
+.korisnici-tabela{
+
+
+     display: block;
+   position: relative;
+    width: 100%;
+    height: 90%;
+     overflow: hidden;
+   top: 0px;
+   margin: 0 auto;
+ }
+.korisnici{
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+ /*  background-color: #f1e5f2;*/
+}
+.korisnici-head{
+   display: block;
+   position: relative;
+    width: 100%;
+    height: 10%;
+     overflow: hidden;
+
+   /*  background-color: red;*/
+
+}
+.korisnici-body-tr{
+   display: block;
+   position: relative;
+    width: 100%;
+    height: 40px;
+     overflow: hidden;
+   border-bottom: 1px solid #e2e2e2;
+   /*  background-color: red;*/
+
+}
+.korisnici-body{
+   display: block;
+   position: relative;
+    width: 100%;
+    height: 90%;
+     overflow-y: auto;
+     background-color: white;
+    color: gray;
+}
+
+.korisnici-head-th{
+
+    display: block;
+    position: relative;
+    width: 14%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+}
+.korisnici-head-th span{
+
+    position: relative;
+    top: 23%;
+
+}
+.korisnici-body-tr-th span{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 25px;
+    top: 10px;
+   padding-left: 5px;
+     overflow: hidden;
+    text-overflow: clip;
+
+}
+.korisnici-body-tr-th{
+
+     display: block;
+    position: relative;
+    width: 14%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+    overflow: hidden;
+
+}
+
+.korisnici-remove{
+
+   color: gray;
+    font-size: 16pt;
+}
+.korisnici-remove:hover{
+
+   color: red;
+   cursor: pointer;
+}
+
+.korisnici-filter span{
+    position: relative;
+    left: 5px;
+    top: 30%;
+   color: gray;
+
+}
+.filter-korisnika{
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: 10px;
+    right: 10px;
+
+}
+.filter-korisnika input{
+
+    width: 250px;
+    font-family: sans-serif;
+    font-size: 14pt;
+}
+.korisnici-hover{
+
+   color: gray;
+    font-size: 16pt;
+}
+.korisnici-hover:hover{
+
+   color: #428bca;
+   cursor: pointer;
+}

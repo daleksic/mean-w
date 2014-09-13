@@ -1,0 +1,57 @@
+<div class="data" data-ng-controller="ProizvodjaciCtrl" data-ng-init="nadjiPoParametru()">
+   <div class="admin-header">
+         <ul  class="admin-nav-tabs">
+                <li class=" admin_nav"  ng-click="ruta('/admin/kategorije')"><a  href="" ng-click="ruta('/admin/kategorije')">Kategorije</a></li>
+                <li class="admin_nav active-tab"  ng-click="ruta('/admin/proizvodjaci')"><a   href="" ng-click="ruta('/admin/proizvodjaci')">Proizvođači</a></li>
+                <li class="admin_nav  "  ng-click="ruta('/admin/proizvodi')"><a   href="" ng-click="ruta('/admin/proizvoi')">Proizvodi</a></li>
+                <li class="korisnik_nav"  ng-click="ruta('/admin/korisnici')"><a  ng-click="ruta('/admin/korisnici')" href="">Korisnici</a></li>
+                <li class="admin_nav "  ng-click="ruta('/admin/admini')"><a  ng-click="ruta('/admin/admini')" href="">Admini</a></li>
+            </ul>
+
+     </div>
+    <div class="admin-body">
+       <!-- <ul  class="admin-nav-menu">
+            <li   ng-click="setRoute('insert/category')"><a class="admin_menu"  href="#/dodavanje/kategorija">Kategorija</a></li>
+            <li  ng-click="setRoute('dodavanjeKategorije')"><a class="admin_menu"  href="#/dodavanje/proizvodjac">Proizvođač</a></li>
+            <li   ng-click="setRoute('dodavanjeProizvoda')"><a class="active-menu"   href="">Proizvod</a></li>
+            <li   ng-click="setRoute('view/categories')"><a  class="admin_menu"  href="">Pregled</a></li>
+        </ul> -->
+        <div class="admin-content">
+
+        <!--   <div class="admin-form">
+
+                <div class="admin-form-table"> -->
+
+
+                    <div class="form-proizvodjac" >
+                        <div class="form-proizvodjac-header"><h3>Pregled proizvodjača</h3></div>
+                        <div class="form-proizvodjac-body">
+                            <form   >
+
+                                <div class="form-proizvodjac-body-form-item" >
+                                    <div class="form-proizvodjac-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1"  >Id</span></div>
+                            <!--        <input disabled type="text" value="{{proizvodjac._id}}"  placeholder="Naziv" class="form-proizvodjac-body-form-item-input" id="korisnickoImeInput"> -->
+                                    <div class="form-kategorija-body-form-item-pregledDiv"><span>{{proizvodjac._id}}</span></div>
+                                </div>
+                                <div class="form-proizvodjac-body-form-item" >
+                                    <div class="form-proizvodjac-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1"  >Naziv</span></div>
+                            <!--        <input disabled type="text" value="{{proizvodjac.naziv}}"  placeholder="Naziv" class="form-proizvodjac-body-form-item-input" id="korisnickoImeInput"> -->
+                                    <div class="form-kategorija-body-form-item-pregledDiv"><span>{{proizvodjac.naziv}}</span></div>
+                                </div>
+
+                                <div class="form-proizvodjac-body-form-item">
+                                    <div class="form-proizvodjac-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Adresa</span></div>
+                                <!--    <input disabled type="text" value="{{proizvodjac.adresa}}"   placeholder="Adresa" class="form-proizvodjac-body-form-item-input" id="korisnickoImeInput"> -->
+                                    <div class="form-kategorija-body-form-item-pregledDiv"><span>{{proizvodjac.adresa}}</span></div>
+                                </div>
+
+                             <!--   <div class="form-proizvodjac-body-form-item">
+                                    <input type="submit" value="Dodati" class="form-proizvodjac-body-form-item-submit" >
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+
+
+
+</div>

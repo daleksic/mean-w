@@ -1,0 +1,107 @@
+<div class="data" ng-if="global.authenticated" data-ng-controller="KorisnikNarucivanjeCtrl">
+    <div class="data-header">
+        <div class="data-image-title"> <img src="../img/web-shop/checkout.png" > <h2>Naručivanje</h2></div>
+     </div>
+    <div class="data-body">
+        <div class="narucivanje">
+            <div class="narucivanje-container">
+              <div class="obracun">
+                  <div class="narucivanje-header">
+                      <span>Informacije o obračunu</span>
+                  </div>
+                  <div class="narucivanje-body">
+                        <div class="narucivanje-body-item">
+                              <div class="narucivanje-body-item-placeholder">
+                                  <span>Ime</span>
+                              </div>
+                              <div class="narucivanje-body-item-data">
+                                  <span class="narucivanje-body-item-data-span">{{global.user.ime}}</span>
+                              </div>
+                        </div>
+                        <div class="narucivanje-body-item">
+                              <div class="narucivanje-body-item-placeholder">
+                                  <span>Prezime</span>
+                              </div>
+                              <div class="narucivanje-body-item-data">
+                                  <span class="narucivanje-body-item-data-span">{{global.user.prezime}}</span>
+                              </div>
+                        </div>
+                        <div class="narucivanje-body-item">
+                              <div class="narucivanje-body-item-placeholder">
+                                  <span>Adresa</span>
+                              </div>
+                              <div class="narucivanje-body-item-data">
+                                  <input type="text" data-ng-model="adresaPosiljaoca" ng-init="adresaPosiljaoca = global.user.adresa" ng-change="prikaziPoruku(adresaPosiljaoca)" placeholder="Adresa" name="lozinka" class="form-login-body-form-item-input">
+                                  <div class="form-login-body-form-item-validation-message"><span>{{adresaPoruka}}</span></div>
+                              </div>
+                        </div>
+                  </div>
+              </div>
+            </div>
+            <div class="narucivanje-container">
+              <div class="placanje">
+                  <div class="narucivanje-header">
+                      <span>Informacije o plaćanju</span>
+                  </div>
+                  <div class="narucivanje-body">
+                        <div class="narucivanje-body-item">
+                              <div class="narucivanje-body-item-placeholder">
+                                  <span>Način plaćanja</span>
+                              </div>
+                              <div class="narucivanje-body-item-data">
+                                  <select id="form-proizvod-body-form-item-select" data-ng-model="nacinSelect" ng-change="prikaziPorukuNacinPlacanja(nacinSelect)" ng-options="nacini.nacin for nacini in naciniPlacanja" >
+                                      <option value="">-- izaberite način plaćanja --</option>
+                                  </select>
+                                  <div class="form-login-body-form-item-validation-message"><span>{{nacinPlacanjaPoruka}}</span></div>
+                              </div>
+                        </div>
+                  </div>
+              </div>
+            </div>
+            <div class="narucivanje-container">
+              <div class="pregled-korpe">
+                  <div class="narucivanje-header">
+                      <span>Pregled korpe</span>
+                  </div>
+                  <div class="narucivanje-body">
+                        <div class="pregled-korpe-naslov">
+                            <div class="pregled-korpe-naslov-inner1"><span>Naziv</span></div>
+                            <div class="pregled-korpe-naslov-inner2"><span>Kol</span></div>
+                            <div class="pregled-korpe-naslov-inner3"><span >Cena</span></div>
+                        </div>
+                        <div class="pregled-korpe-proizvodi">
+                            <div class="pregled-korpe-proizvodi-items">
+
+                                <div class="pregled-korpe-proizvodi-item" ng-repeat="proizvod in proizvodi">
+                                    <div class="pregled-korpe-naslov-inner1"><span class="pregled-korpe-proizvodi-item-data">{{proizvod.naziv}}</span></div>
+                                    <div class="pregled-korpe-naslov-inner2"><span class="pregled-korpe-proizvodi-item-data">{{proizvod.kolicina}}</span></div>
+                                    <div class="pregled-korpe-naslov-inner3"><span class="pregled-korpe-proizvodi-item-data">{{proizvod.cena}}</span></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="pregled-korpe-total">
+                            <div class="pregled-korpe-proizvodi-inner1"><span>Ukupna cena:</span></div>
+                            <div class="pregled-korpe-proizvodi-inner2"><span>{{total}}</span></div>
+                        </div>
+                  </div>
+              </div>
+            </div>
+            <div class="posalji"> <button class="btn btn-success btn-pozicija" ng-click="posaljiNarudzbinu()">Pošaljite narudžbinu</button> </div>
+        </div>
+
+    </div>
+</div>
+<div ng-if="!global.authenticated" class="data" data-ng-controller="KorisnikNarucivanjeCtrl">
+    <div class="data-header">
+        <div class="data-image-title"> <img src="../img/web-shop/checkout.png" > <h2>Naručivanje</h2></div>
+     </div>
+    <div class="data-body">
+           <div class="narudzbe-zahvala">
+                  <div class="narudzbe-zahvala-wrapper">
+                      <h2>Niste prijavljeni!</h2>
+                      <p>Da biste poručili narudžbinu morate biti prijavljeni. <a href="/prijava">Prijavite se</a></p>
+                  </div>
+           </div>
+    </div>
+</div>

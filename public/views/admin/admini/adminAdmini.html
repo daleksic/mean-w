@@ -1,0 +1,160 @@
+<div class="data" data-ng-controller="AdminiCtrl" data-ng-init="nadjiAdmine()">
+   <div class="admin-header">
+         <ul  class="admin-nav-tabs">
+                <li class=" admin_nav"  ng-click="ruta('/admin/kategorije')"><a data-toggle="tab" href="">Kategorije</a></li>
+                <li class="admin_nav "  ng-click="ruta('/admin/proizvodjaci')"><a ng-click="ruta('/admin/proizvodjaci')"  href="">Proizvođači</a></li>
+                <li class="admin_nav  "  ng-click="ruta('/admin/proizvodi')"><a ng-click="ruta('/admin/proizvodi')"  href="">Proizvodi</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/korisnici')"><a  ng-click="ruta('/admin/korisnici')" href="">Korisnici</a></li>
+                <li class="admin_nav active-tab"  ng-click="ruta('/admin/admini')"><a  ng-click="ruta('/admin/admini')" href="">Admini</a></li>
+            </ul>
+
+     </div>
+    <div class="admin-body">
+       <!-- <ul  class="admin-nav-menu">
+            <li   ng-click="setRoute('insert/category')"><a class="admin_menu"  href="#/dodavanje/kategorija">Kategorija</a></li>
+            <li  ng-click="setRoute('dodavanjeKategorije')"><a class="admin_menu"  href="#/dodavanje/proizvodjac">Proizvođač</a></li>
+            <li   ng-click="setRoute('dodavanjeProizvoda')"><a class="active-menu"   href="">Proizvod</a></li>
+            <li   ng-click="setRoute('view/categories')"><a  class="admin_menu"  href="">Pregled</a></li>
+        </ul> -->
+        <div class="admin-content">
+            <div class="admini-table">
+
+                <div class="admini-filter">
+                    <button class="dodaj-admina-button" ng-click="ruta('/admin/admini/dodavanje')" >
+                        <i class="fa fa-plus"></i>
+                    </button>
+                    <span>Ukupno admina: {{admini.length}}</span>
+                    <div class="filter-admina"><input type="text" ng-model="searchAdmins" placeholder="Filter admina">  </div>
+                </div>
+
+                <div class="admini-tabela">
+
+
+                    <div class="admini">
+
+                        <div class="admini-head">
+                            <div class="admini-head-th"><span><b>Id</b></span></div>
+                            <div class="admini-head-th"><span><b>Korisničko ime</b></span></div>
+                            <div class="admini-head-th"><span><b>Lozinka</b></span></div>
+
+
+                        </div>
+                        <div class="admini-body">
+
+                            <div class="admini-body-tr" data-ng-repeat="admin in admini | filter:searchAdmins">
+                                <div class="admini-body-tr-th"><span>{{admin._id}}</span></div>
+                                <div class="admini-body-tr-th"><span>{{admin.korisnickoIme}}</span></div>
+                                <div class="admini-body-tr-th"><span>{{admin.lozinka}}</span></div>
+                               
+                            </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+          <!--  <div class="admin-form">
+                <div class="admin-form-buttons">
+                    <div class="div-buttons">
+                         <button class="dodaj-kategoriju-button" ng-click="dodavanjeKategorije()" ng-class='aktivnoDodavanjeKlasa' >
+                             <i class="fa fa-plus"></i>
+                        </button>
+                        <button class="izmeni-kategoriju-button" ng-click="izmenaKategorije()" ng-class='aktivnoIzmenaKlasa'>
+                            <i class="fa fa-refresh"></i>
+                        </button>
+                        <button class="pregled-kategorije-button" ng-click="pregledKategorije()" ng-class='aktivnoPregledKlasa'>
+                            <i class="fa fa-eye"></i>
+                        </button>
+
+                        <button class="obrisi-polja-kategorije-button "><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="admin-form-table">
+
+
+                    <div class="form-kategorija" data-ng-show="dodavanje">
+
+                       <div class="form-kategorija-body">
+                           <form action="" method="">
+
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder">
+                                       <span class="top-placeholder" id="top-placeholder1" >Naziv</span>
+                                   </div>
+                                   <input type="text" placeholder="Naziv" class="form-kategorija-body-form-item-input" id="korisnickoImeInput">
+                                   <div class="form-kategorija-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                               </div>
+
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder"><span>Velika fotografija</span></div>
+                                   <input type="file"  class="form-kategorija-body-form-item-input-file">
+                                   <div class="form-kategorija-body-form-item-validation-message">
+                                       <span>Input nije dobar</span>
+                                   </div>
+                               </div>
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder"><span>Mala fotografija</span></div>
+                                   <input type="file"  class="form-kategorija-body-form-item-input-file">
+                                   <div class="form-kategorija-body-form-item-validation-message">
+                                       <span>Input nije dobar</span>
+                                   </div>
+                               </div>
+                               <div class="form-kategorija-body-form-item">
+                                    <input type="submit" value="Dodati" class="form-kategorija-body-form-item-submit" id="bu">
+                                </div>
+                           </form>
+                       </div>
+                    </div>
+
+
+
+                      <div class="form-kategorija" data-ng-show="izmena">
+
+                       <div class="form-kategorija-body">
+                           <form action="" method="">
+
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder">
+                                       <span class="top-placeholder" id="top-placeholder1" >Naziv</span>
+                                   </div>
+                                   <input type="text" placeholder="Naziv" class="form-kategorija-body-form-item-input" id="korisnickoImeInput">
+                                   <div class="form-kategorija-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                               </div>
+
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder"><span>Velika fotografija</span></div>
+                                   <input type="file"  class="form-kategorija-body-form-item-input-file">
+                                   <div class="form-kategorija-body-form-item-validation-message">
+                                       <span>Input nije dobar</span>
+                                   </div>
+                               </div>
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder"><span>Mala fotografija</span></div>
+                                   <input type="file"  class="form-kategorija-body-form-item-input-file">
+                                   <div class="form-kategorija-body-form-item-validation-message">
+                                       <span>Input nije dobar</span>
+                                   </div>
+                               </div>
+                               <div class="form-kategorija-body-form-item">
+                                    <input type="submit" value="Izmeniti" class="form-kategorija-body-form-item-submit" id="bu">
+                                </div>
+                           </form>
+                       </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div> -->
+
+        </div>
+    </div>
+</div>

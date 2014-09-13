@@ -1,0 +1,63 @@
+<div class="data" data-ng-controller="KategorijeCtrl" data-ng-init="nadjiKategorijuPoParametru()">
+   <div class="admin-header">
+         <ul  class="admin-nav-tabs">
+                <li class=" admin_nav active-tab"  ng-click="ruta('/admin/kategorije')"><a  href="" ng-click="ruta('/admin/kategorije')">Kategorije</a></li>
+                <li class="admin_nav "  ng-click="ruta('/admin/proizvodjaci')"><a   href="" ng-click="ruta('/admin/proizvodjaci')">Proizvođači</a></li>
+                <li class="admin_nav  "  ng-click="ruta('/admin/proizvodi')"><a   href="" ng-click="ruta('/admin/proizvodi')">Proizvodi</a></li>
+                <li class="korisnik_nav"  ng-click="ruta('/admin/korisnici')"><a  ng-click="ruta('/admin/korisnici')" href="">Korisnici</a></li>
+                <li class="admin_nav "  ng-click="ruta('/admin/admini')"><a  ng-click="ruta('/admin/admini')" href="">Admini</a></li>
+            </ul>
+
+     </div>
+    <div class="admin-body">
+       <!-- <ul  class="admin-nav-menu">
+            <li   ng-click="setRoute('insert/category')"><a class="admin_menu"  href="#/dodavanje/kategorija">Kategorija</a></li>
+            <li  ng-click="setRoute('dodavanjeKategorije')"><a class="admin_menu"  href="#/dodavanje/proizvodjac">Proizvođač</a></li>
+            <li   ng-click="setRoute('dodavanjeProizvoda')"><a class="active-menu"   href="">Proizvod</a></li>
+            <li   ng-click="setRoute('view/categories')"><a  class="admin_menu"  href="">Pregled</a></li>
+        </ul> -->
+        <div class="admin-content">
+
+        <!--   <div class="admin-form">
+
+                <div class="admin-form-table"> -->
+
+
+                    <div class="form-kategorija" >
+                        <div class="form-kategorija-header"><h3>Pregled kategorije</h3></div>
+                        <div class="form-kategorija-body-pregled">
+                            <form   >
+
+                                <div class="form-kategorija-body-form-item-pregled" >
+                                    <div class="form-kategorija-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1"  >Id</span></div>
+                              <!--      <input disabled type="text" value="{{kategorija._id}}"  placeholder="Naziv" class="form-proizvodjac-body-form-item-input" id="korisnickoImeInput">  -->
+                                    <div class="form-kategorija-body-form-item-pregledDiv"><span   >{{kategorija._id}}</span></div>
+                                </div>
+                                <div class="form-kategorija-body-form-item-pregled" >
+                                    <div class="form-kategorija-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1"  >Naziv</span></div>
+                                <!--    <input disabled type="text" value="{{kategorija.naziv}}"  placeholder="Naziv" class="form-proizvodjac-body-form-item-input" id="korisnickoImeInput">  -->
+                                    <div class="form-kategorija-body-form-item-pregledDiv"><span   >{{kategorija.naziv}}</span></div>
+                                </div>
+
+                                <div class="form-kategorija-body-form-item2">
+                                    <div class="form-kategorija-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Velika slika</span></div>
+
+                                    <img ng-src="{{kategorija.velikaSlika}}" />
+                                </div>
+
+                                <div class="form-kategorija-body-form-item-pregled">
+                                    <div class="form-kategorija-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Mala slika</span></div>
+
+                                     <img ng-src="{{kategorija.malaSlika}}" />
+                                </div>
+
+                             <!--   <div class="form-proizvodjac-body-form-item">
+                                    <input type="submit" value="Dodati" class="form-proizvodjac-body-form-item-submit" >
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+
+
+
+</div>

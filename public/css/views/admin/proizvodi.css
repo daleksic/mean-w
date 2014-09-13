@@ -1,0 +1,680 @@
+.admin-header{
+     display: block;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+
+  /*  border-bottom: 1px solid gray;*/
+    box-sizing: border-box;
+}
+.admin-body{
+     display: block;
+    position: relative;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-y: auto;
+
+}
+.admin-nav-tabs{
+      display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+/*    background-color: gray;*/
+    list-style-type: none;
+
+}
+
+.admin_nav{
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    line-height: 50px;
+    top: 0;
+    left: 0;
+   /*   border: 1px solid gray;*/
+    float:left;
+    text-align: center;
+ /*   vertical-align: middle;*/
+}
+.admin_nav a{
+    font-size: 18pt;
+    text-decoration: none;
+    color:  #428bca;
+}
+.admin_nav:hover{
+
+     background-color: lightgray;
+    cursor: pointer;
+
+}
+.admin_nav a:hover{
+     color:  #428bca;
+    cursor: inherit;
+}
+.active-tab{
+
+     background-color: white;
+}
+.active-menu{
+
+
+     display: inline-block;
+    position: relative;
+    width: 25%;
+    height: 10%;
+    line-height: 40px;
+    top: 0;
+    left: 0;
+   /*   border: 1px solid gray;*/
+    float:left;
+    text-align: center;
+ /*   vertical-align: middle;*/
+      font-size: 14pt;
+    text-decoration: none;
+      background-color: #428bca;
+    color: white;
+/*  border-bottom: 1px solid #428bca;*/
+}
+.admin-nav-menu{
+
+       display: block;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+/*    background-color: gray;*/
+    list-style-type: none;
+ /*    border-bottom: 1px solid #428bca;*/
+}
+.admin_menu{
+
+      display: inline-block;
+    position: relative;
+    width: 25%;
+    height: 10%;
+    line-height: 40px;
+    top: 0;
+    left: 0;
+   /*   border: 1px solid gray;*/
+    float:left;
+    text-align: center;
+ /*   vertical-align: middle;*/
+      font-size: 14pt;
+    text-decoration: none;
+    color: #428bca;
+/*  border-bottom: 1px solid #428bca;*/
+
+}
+.admin_menu:hover{
+      background-color: #428bca;
+    cursor: pointer;
+    text-decoration: none;
+    color:  white;
+}
+.active-menu:hover{
+      background-color: #428bca;
+    cursor: pointer;
+    text-decoration: none;
+    color:  white;
+}
+/*.admin_menu a{
+    font-size: 14pt;
+    text-decoration: none;
+    color:  #428bca;
+}*/
+.admin-content{
+
+       display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  /*  background-color: gray;*/
+    overflow-y: auto;
+}
+
+
+.proizvodi-table{
+
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+  /*  background-color: gray;*/
+
+}
+.admin-form{
+
+     display: inline-block;
+    position: relative;
+    width: 32%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+  /*  background-color: gray;*/
+}
+.form-proizvod{
+
+     display: block;
+   position: relative;
+    width: 100%;
+    height: 821px;
+     overflow: hidden;
+   top: 0px;
+   margin: 0 auto;
+     background-color: white;
+    padding-top: 5px;
+
+    /*  border: 1px solid #e2e2e2;*/
+
+
+}
+.form-proizvod-pregled{
+
+     display: block;
+   position: relative;
+    width: 100%;
+    height: 100%;
+     overflow-x: scroll;
+   top: 0px;
+   margin: 0 auto;
+     background-color: white;
+    padding-top: 5px;
+
+    /*  border: 1px solid #e2e2e2;*/
+
+
+}
+.form-proizvod-header{
+
+      display: block;
+   position: relative;
+    width: 380px;
+    height: 50px;
+     overflow: hidden;
+   top: 0px;
+   margin: 0 auto;
+   /*  background-color: #e2e2e2;*/
+    border-bottom: 1px solid #e2e2e2;
+}
+.form-proizvod-body{
+
+       display: block;
+   position: relative;
+    width: 300px;
+    height: 820px;
+     overflow: hidden;
+   top: 0px;
+   margin: 0 auto;
+ /*   padding-top: 20px;*/
+/*  background-color: #e2e2e2;*/
+
+}
+.form-proizvod-body-pregled{
+
+       display: block;
+   position: relative;
+    width: 300px;
+    height: 1020px;
+  /*   overflow-x: scroll;*/
+   top: 0px;
+   margin: 0 auto;
+ /*   padding-top: 20px;*/
+/*  background-color: #e2e2e2;*/
+
+}
+.form-proizvod-body-form-item{
+
+   display: block;
+   position: relative;
+    width: 300px;
+    height: 90px;
+     overflow: hidden;
+   top: 15px;
+   margin: 0 auto;
+  /*   background-color: #e2e2e2;*/
+   /* border:  1px solid gray;*/
+
+}
+.form-proizvod-body-form-item-pregled{
+
+   display: block;
+   position: relative;
+    width: 300px;
+    height: 200px;
+     overflow: hidden;
+   top: 15px;
+
+   margin: 0 auto;
+  /*   background-color: #e2e2e2;*/
+   /* border:  1px solid gray;*/
+
+}
+.form-proizvod-body-form-item-div-textarea{
+     display: block;
+   position: relative;
+    width: 300px;
+    height: 150px;
+     overflow: hidden;
+   top: 15px;
+   margin: 0 auto;
+
+}
+.form-proizvod-body-form-item-submit{
+
+    display: block;
+    position: relative;
+     background-color:  #428bca;
+    border: none;
+    color: white;
+    width: 290px;
+    height: 40px;
+    margin: 0 auto;
+    top: 10px;
+}
+.form-proizvod-body-form-item-submit:hover{
+
+
+     background-color:  #4791cf;
+
+}
+/*.form-login-body-form-item-input:active{
+
+     border: none;
+    border-bottom: 2px solid gray;
+}*/
+.form-proizvod-body-form-item-input{
+
+      display: block;
+    position: relative;
+    width: 290px;
+    top: 0;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14pt;
+    border: none;
+    border-bottom: 2px solid lightgray;
+}
+.form-proizvod-body-form-item-input:focus::-webkit-input-placeholder { color:transparent;}
+.form-proizvod-body-form-item-input:focus::-moz-placeholder { color:transparent; }
+.form-proizvod-body-form-item-input:focus{
+   border-bottom: 2px solid #428bca;
+    outline: 0;
+}
+
+.form-proizvod-body-form-item-input-textarea{
+
+    display: block;
+    position: relative;
+    width: 290px;
+    height: 100px;
+    top: 0;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14pt;
+    border: none;
+    border: 2px solid lightgray;
+
+}
+.form-proizvod-body-form-item-input-textarea:focus::-webkit-input-placeholder { color:transparent;}
+.form-proizvod-body-form-item-input-textarea:focus::-moz-placeholder { color:transparent; }
+.form-proizvod-body-form-item-input-textarea:focus{
+   border: 2px solid #428bca;
+    outline: 0;
+}
+
+.form-proizvod-body-form-item-top-placeholder{
+
+     display: block;
+    position: relative;
+  /*   background-color:  red;*/
+    top: 0;
+    margin: 0 auto;
+    color: white;
+    width: 290px;
+    height: 20px;
+}
+.form-proizvod-body-form-item-validation-message{
+
+     display: block;
+    position: relative;
+   /*  background-color:  red;*/
+    top: 0;
+    margin: 0 auto;
+    color: white;
+    width: 290px;
+    height: 20px;
+}
+.form-proizvod-body-form-item-top-placeholder span{
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height:  100%;
+    font-size: 11pt;
+    color: #428bca;
+    overflow: hidden;
+
+}
+.form-proizvod-body-form-item-validation-message span{
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height:  100%;
+    font-size: 11pt;
+    color: red;
+    overflow: hidden;
+}
+.form-proizvod-header h3{
+
+    position: relative;
+    left: 5px;
+    top: 10px;
+    color: gray;
+    margin: 0;
+}
+.form-proizvod-body-form-item-input-file{
+
+      display: block;
+    position: relative;
+    width: 290px;
+    top: 0;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14pt;
+    border: none;
+
+}
+#form-proizvod-body-form-item-select{
+
+
+  /*    display: block;*/
+    position: relative;
+    width: 290px;
+    top: 0;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14pt;
+    border: none;
+  border: 2px solid lightgray;
+
+}
+#form-proizvod-body-form-item-select:focus{
+   border: 2px solid #428bca;
+    outline: 0;
+}
+.proizvod-filter{
+
+
+     display: block;
+   position: relative;
+    width: 100%;
+    height: 10%;
+     overflow: hidden;
+   top: 0px;
+   margin: 0 auto;
+  border-bottom: 1px solid #e2e2e2;
+
+}
+.proizvod-tabela{
+
+
+     display: block;
+   position: relative;
+    width: 100%;
+    height: 90%;
+     overflow: hidden;
+   top: 0px;
+   margin: 0 auto;
+ }
+.proizvodi{
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+ /*  background-color: #f1e5f2;*/
+}
+.proizvodi-head{
+   display: block;
+   position: relative;
+    width: 100%;
+    height: 10%;
+     overflow: hidden;
+
+   /*  background-color: red;*/
+
+}
+.proizvodi-body-tr{
+   display: block;
+   position: relative;
+    width: 100%;
+    height: 40px;
+     overflow: hidden;
+   border-bottom: 1px solid #e2e2e2;
+   /*  background-color: red;*/
+
+}
+.proizvodi-body{
+   display: block;
+   position: relative;
+    width: 100%;
+    height: 90%;
+     overflow-y: auto;
+     background-color: white;
+    color: gray;
+}
+
+.proizvodi-head-th{
+
+    display: block;
+    position: relative;
+    width: 9%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+}
+.proizvodi-head-th span{
+
+    position: relative;
+    top: 23%;
+
+}
+.proizvodi-body-tr-th span{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 25px;
+    top: 10px;
+   padding-left: 5px;
+     overflow: hidden;
+    text-overflow: clip;
+
+}
+.proizvodi-body-tr-th{
+
+     display: block;
+    position: relative;
+    width: 9%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+    overflow: hidden;
+
+}
+
+.proizvodi-remove{
+
+   color: gray;
+    font-size: 16pt;
+}
+.proizvodi-remove:hover{
+
+   color: red;
+   cursor: pointer;
+}
+.proizvodi-hover{
+
+   color: gray;
+    font-size: 16pt;
+}
+.proizvodi-hover:hover{
+
+   color: #428bca;
+   cursor: pointer;
+}
+.proizvodi-input{
+
+    width: 60px;
+    font-size: 8pt;
+}
+.admin-form-buttons{
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+  /*  background-color: red;*/
+}
+.admin-form-table{
+     display: block;
+    position: relative;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
+ /*   background-color: green;*/
+
+}
+.dodaj-proizvod-button{
+   position: relative;
+    width: 40px;
+    height: 40px;
+    top: 3px;
+    left: 3px;
+    border: none;
+    background-color: #e2e2e2;
+
+
+    color: #080808;
+
+}
+.izmeni-proizvod-button{
+   position: relative;
+    width: 40px;
+    height: 40px;
+
+    left: 5px;
+    border: none;
+    background-color: #e2e2e2;
+
+
+    color: #080808;
+}
+.pregled-proizvod-button{
+  position: relative;
+    width: 40px;
+    height: 40px;
+
+    left: 10px;
+    border: none;
+    background-color: #e2e2e2;
+
+
+    color: #080808;
+
+}
+.obrisi-polja-proizvod-button{
+
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    float: right;
+    right: 1px;
+    border: none;
+    background-color: #e2e2e2;
+    color: #080808;
+}
+.div-buttons{
+
+    display: block;
+     position: absolute;
+     width: 100%;
+     height: 40px;
+     bottom: 0;
+   /*  background-color: green;*/
+}
+.dodaj-proizvod-button:hover, .izmeni-proizvod-button:hover, .pregled-proizvod-button:hover, .obrisi-polja-proizvod-button:hover{
+
+    background-color: #428bca;
+     color: white;
+}
+.activeButton{
+    background-color: #428bca;
+     color: white;
+
+}
+.dodaj-proizvod-button:focus, .izmeni-proizvod-button:focus, .pregled-proizvod-button:focus, .obrisi-polja-proizvod-button:focus{
+ /*  border: 2px solid #428bca;*/
+    outline: 0;
+}
+.proizvod-filter span{
+    position: relative;
+    left: 5px;
+    top: 0px;
+   color: gray;
+
+}
+.filter-proizvoda{
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: 10px;
+    right: 10px;
+
+}
+.filter-proizvoda input{
+
+    width: 250px;
+    font-family: sans-serif;
+    font-size: 14pt;
+}
+.form-proizvod-body-form-item-pregledDiv{
+      display: block;
+    position: relative;
+    width: 290px;
+    top: 0;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14pt;
+    border: none;
+
+}

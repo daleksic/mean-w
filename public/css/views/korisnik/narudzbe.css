@@ -1,0 +1,409 @@
+.narudzbe{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+}
+.narudzbe-wrapper1{
+  display: inline-block;
+  position: relative;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  float: left;
+}
+.narudzbe-wrapper2{
+
+  display: inline-block;
+  position: relative;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  float: right;
+}
+.narudzbe-container{
+
+  display: block;
+  position: relative;
+  width: 99%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  float: left;
+  background-color: white;
+  overflow: hidden;
+}
+.narudzbe-proizvodi{
+
+  display: block;
+  position: relative;
+  width: 99%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  float: right;
+  background-color: white;
+
+}
+.narudzbe-items{
+
+  display: block;
+  position: relative;
+  width: 650px;
+  height: 95%;
+  top: 12px;
+  margin: 0 auto;
+  border: 1px solid #e2e2e2;
+  overflow: hidden;
+}
+.narudzbe-items-header{
+
+  display: block;
+  position: relative;
+  width: 650px;
+  height: 10%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #e2e2e2;
+  overflow: hidden;
+}
+.narudzbe-items-header-item-no{
+
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+}
+.narudzbe-items-header-item-vreme{
+
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+}
+.narudzbe-items-header-item-datum{
+
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+
+}
+.narudzbe-items-header-item-cena{
+
+  display: block;
+  position: relative;
+  width: 70px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+}
+.narudzbe-items-header-item-nacin{
+
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+}
+.narudzbe-items-header-item-adresa{
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+
+}
+.naslov-narudzba{
+    display: block;
+    position: relative;
+    font-size: 12pt;
+    top: 25%;
+    text-align: center;
+    color: gray;
+}
+.narudzbe-items-body{
+
+  display: block;
+  position: relative;
+  width: 650px;
+  height: 90%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+}
+.narudzbe-items-wrapper{
+
+  display: block;
+  position: relative;
+  width: 650px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+}
+.narudzbe-items-scroll{
+
+  display: block;
+  position: relative;
+  width: 665px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+}
+.narudzbe-items-scroll-tr{
+
+  display: block;
+  position: relative;
+  width: 651px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-bottom: 1px solid #e2e2e2;
+
+}
+.narudzbe-items-scroll-td-no{
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+
+}
+.narudzbe-items-scroll-td-vreme{
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+  overflow: hidden;
+}
+.narudzbe-items-scroll-td-datum{
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+  overflow: hidden;
+}
+.narudzbe-items-scroll-td-cena{
+
+  display: block;
+  position: relative;
+  width: 70px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+  overflow: hidden;
+}
+.narudzbe-items-scroll-td-nacin{
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+  overflow: hidden;
+
+}
+.narudzbe-items-scroll-td-adresa{
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  float: left;
+  border-right: 1px solid #e2e2e2;
+  overflow: hidden;
+}
+.naslov-td{
+  display: block;
+  position: relative;
+  font-size: 12pt;
+  top: 20%;
+  text-align: center;
+  color: black;
+}
+.narudzbe-proizvodi-tabela{
+  display: block;
+  position: relative;
+  width: 420px;
+  height: 95%;
+  top: 12px;
+  margin: 0 auto;
+  border: 1px solid #e2e2e2;
+  overflow: hidden;
+
+}
+.narudzbe-proizvodi-items-header-item-naziv{
+
+      display: block;
+      position: relative;
+      width: 170px;
+      height: 100%;
+      top: 0;
+      float: left;
+      border-right: 1px solid #e2e2e2;
+}
+.narudzbe-proizvodi-items-header-item-jed{
+      display: block;
+      position: relative;
+      width: 100px;
+      height: 100%;
+      top: 0;
+      float: left;
+      border-right: 1px solid #e2e2e2;
+}
+.narudzbe-proizvodi-items-header-item-kol{
+      display: block;
+      position: relative;
+      width: 50px;
+      height: 100%;
+      top: 0;
+      float: left;
+      border-right: 1px solid #e2e2e2;
+
+}
+.narudzbe-proizvodi-items-header-item-subcena{
+      display: block;
+      position: relative;
+      width: 100px;
+      height: 100%;
+      top: 0;
+      float: left;
+      border-right: 1px solid #e2e2e2;
+
+}
+.narudzbe-items-scroll-td-naziv{
+    display: block;
+    position: relative;
+    width: 170px;
+    height: 100%;
+    top: 0;
+    float: left;
+    border-right: 1px solid #e2e2e2;
+    overflow: hidden;
+}
+.narudzbe-items-scroll-td-jed{
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 100%;
+    top: 0;
+    float: left;
+    border-right: 1px solid #e2e2e2;
+    overflow: hidden;
+}
+.narudzbe-items-scroll-td-kol{
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    float: left;
+    border-right: 1px solid #e2e2e2;
+    overflow: hidden;
+}
+.narudzbe-items-scroll-td-subcena{
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 100%;
+    top: 0;
+    float: left;
+    border-right: 1px solid #e2e2e2;
+    overflow: hidden;
+}
+/*.tr-hover{
+     background-color: #e2e2e2;
+    cursor: pointer;
+}*/
+.tr-active{
+    background-color: #428bca;
+    cursor: pointer;
+}
+.span-active{
+
+  color: white;
+}
+.cell-active{
+
+    border-right: 1px solid white;
+}
+.tr-hover{}
+.tr-hover:hover{
+  /*  background-color: #f5f5f5; */
+   cursor: pointer;
+
+}
+.narudzbe-zahvala{
+
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+.narudzbe-zahvala-wrapper{
+
+  display: block;
+  position: relative;
+  width: 400px;
+  height: 300px;
+  top: 50px;
+  margin: 0 auto;
+
+}
+.narudzbe-zahvala-wrapper h2{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.narudzbe-zahvala-wrapper p{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+
+}

@@ -1,0 +1,69 @@
+<div class="data" data-ng-controller="KorisniciCtrl" data-ng-init="nadjiKorisnike()">
+   <div class="korisnik-header">
+         <ul  class="korisnik-nav-tabs">
+                <li class=" korisnik_nav"  ng-click="ruta('/admin/kategorije')"><a data-toggle="tab" href="">Kategorije</a></li>
+                <li class="korisnik_nav "  ng-click="ruta('/admin/proizvodjaci')"><a ng-click="ruta('/admin/proizvodjaci')"  href="">Proizvođači</a></li>
+                <li class="korisnik_nav  "  ng-click="ruta('/admin/proizvodi')"><a ng-click="ruta('/admin/proizvodi')"  href="">Proizvodi</a></li>
+                <li class="korisnik_nav active-tab"  ng-click="ruta('/admin/korisnici')"><a  ng-click="ruta('/admin/korisnici')" href="">Korisnici</a></li>
+                <li class="korisnik_nav "  ng-click="ruta('/admin/admini')"><a  ng-click="ruta('/admin/admini')" href="">Admini</a></li>
+            </ul>
+
+     </div>
+    <div class="korisnik-body">
+       <!-- <ul  class="admin-nav-menu">
+            <li   ng-click="setRoute('insert/category')"><a class="admin_menu"  href="#/dodavanje/kategorija">Kategorija</a></li>
+            <li  ng-click="setRoute('dodavanjeKategorije')"><a class="admin_menu"  href="#/dodavanje/proizvodjac">Proizvođač</a></li>
+            <li   ng-click="setRoute('dodavanjeProizvoda')"><a class="active-menu"   href="">Proizvod</a></li>
+            <li   ng-click="setRoute('view/categories')"><a  class="admin_menu"  href="">Pregled</a></li>
+        </ul> -->
+        <div class="korisnik-content">
+            <div class="korisnici-table">
+
+                <div class="korisnici-filter">
+                    <span>Ukupno korisnika: {{korisnici.length}}</span>
+                    <div class="filter-korisnika"><input type="text" ng-model="searchKorisnici" placeholder="Filter korisnika">  </div>
+                </div>
+
+                <div class="korisnici-tabela">
+
+
+                    <div class="korisnici">
+
+                        <div class="korisnici-head">
+                            <div class="korisnici-head-th"><span><b>Id</b></span></div>
+                            <div class="korisnici-head-th"><span><b>Ime</b></span></div>
+                            <div class="korisnici-head-th"><span><b>Prezime</b></span></div>
+                             <div class="korisnici-head-th"><span><b>Korisničko ime</b></span></div>
+                             <div class="korisnici-head-th"><span><b>Adresa</b></span></div>
+                             <div class="korisnici-head-th"><span><b>Pregled</b></span></div>
+                            <div class="korisnici-head-th"><span><b>Izbrisati</b></span></div>
+
+                        </div>
+                        <div class="korisnici-body">
+
+                            <div class="korisnici-body-tr" data-ng-repeat="korisnik in korisnici | filter:searchKorisnici">
+                                <div class="korisnici-body-tr-th"><span>{{korisnik._id}}</span></div>
+                                <div class="korisnici-body-tr-th"><span>{{korisnik.ime}}</span></div>
+                                <div class="korisnici-body-tr-th"><span>{{korisnik.prezime}}</span></div>
+                                <div class="korisnici-body-tr-th"><span>{{korisnik.korisnickoIme}}</span></div>
+                                <div class="korisnici-body-tr-th"><span>{{korisnik.adresa}}</span></div>
+                                <div class="korisnici-body-tr-th"> <span><a data-ng-href="#!/admin/korisnici/{{korisnik._id}}"><i class="fa fa-eye korisnici-hover"></i></a> </span></div>
+                                <div class="korisnici-body-tr-th"> <span><i class="fa fa-times korisnici-remove" ng-click="izbrisiKorisnika(korisnik._id)"></i> </span></div>
+                            </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

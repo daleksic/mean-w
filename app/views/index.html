@@ -1,0 +1,7 @@
+ {% extends 'layouts/default.html' %}
+{% block content %}
+    <div class="view-content" data-ui-view></div>
+    <script type="text/javascript">
+        window.user = {{user|safe}};
+    </script>
+{% endblock %}

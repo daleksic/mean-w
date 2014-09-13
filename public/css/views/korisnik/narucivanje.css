@@ -1,0 +1,274 @@
+.narucivanje{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+
+}
+.narucivanje-container{
+  display: inline-block;
+  position: relative;
+  width: 33.3%;
+  height: 80%;
+  float: left;
+
+}
+.obracun{
+  display: block;
+  position: relative;
+  width: 98%;
+  height: 100%;
+  top: 5px;
+  background-color: white;
+}
+.placanje{
+  display: block;
+  position: relative;
+  width: 98%;
+  height: 100%;
+  top: 5px;
+  margin: 0 auto;
+  background-color: white;
+
+}
+.pregled-korpe{
+
+  display: block;
+  position: relative;
+  width: 98%;
+  height: 100%;
+  top: 5px;
+  float: right;
+  background-color: white;
+}
+.narucivanje-header{
+
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 10%;
+  top: 0px;
+  left: 0px;
+  border-bottom: 1px solid #e2e2e2;
+  overflow: hidden;
+
+}
+.narucivanje-header > span{
+    display: block;
+   position: relative;
+   top: 11%;
+   margin: 0 auto;
+   text-align: center;
+   font-size: 14pt;
+   color: gray;
+
+}
+.narucivanje-body{
+
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 90%;
+  top: 0px;
+  left: 0px;
+  margin-top: 40px;
+  overflow: hidden;
+
+}
+.narucivanje-body-item{
+
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  top: 0px;
+  left: 0px;
+/*  margin-top: 10px;*/
+
+}
+.narucivanje-body-item-placeholder{
+  display: block;
+  position: relative;
+  width: 290px;
+  height: 20px;
+  top: 0px;
+  margin: 0 auto;
+  color: #428bca;
+}
+.narucivanje-body-item-data{
+  display: block;
+  position: relative;
+  width: 290px;
+  height: 60px;
+  top: 0px;
+  margin: 0 auto;
+  color: black;
+
+
+}
+.narucivanje-body-item-data-span{
+
+  font-size: 14pt;
+}
+.pregled-korpe-naslov{
+
+  display: block;
+  position: relative;
+  width: 290px;
+  height: 20px;
+  top: 0px;
+  margin: 0 auto;
+  color: #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+.pregled-korpe-proizvodi{
+
+  display: block;
+  position: relative;
+  width: 290px;
+  height: 200px;
+  top: 0px;
+  margin: 0 auto;
+  color: #e2e2e2;
+  overflow: hidden;
+}
+.pregled-korpe-total{
+
+  display: block;
+  position: relative;
+  width: 290px;
+  height: 30px;
+  top: 0px;
+  margin: 0 auto;
+  color: #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+}
+.pregled-korpe-naslov-inner1{
+  display: inline-block;
+  position: relative;
+  width: 140px;
+  height: 100%;
+  top: 0px;
+  float: left;
+  color: #428bca;
+  overflow: hidden;
+
+}
+.pregled-korpe-naslov-inner2{
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 100%;
+  top: 0px;
+  float: left;
+  color: #428bca;
+  overflow: hidden;
+
+}
+.pregled-korpe-naslov-inner3{
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  top: 0px;
+  float: left;
+  color: #428bca;
+  overflow: hidden;
+
+}
+.pregled-korpe-proizvodi-inner2{
+
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  top: 0px;
+  float: left;
+  color: black;
+}
+.pregled-korpe-proizvodi-inner1{
+
+  display: inline-block;
+  position: relative;
+  width: 190px;
+  height: 100%;
+  top: 0px;
+  float: left;
+  color: #428bca;
+}
+.pregled-korpe-proizvodi-inner2 span{
+   font-size: 14pt;
+   float: right;
+   position: relative;
+   right: 5px;
+}
+
+.pregled-korpe-proizvodi-inner1 span{
+    position: relative;
+    float: right;
+    top: 3px;
+}
+.pregled-korpe-naslov-inner3 span{
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align:  right;
+
+}
+.pregled-korpe-naslov-inner2 span{
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align:  right;
+
+}
+.pregled-korpe-proizvodi-items{
+
+  display: block;
+  position: relative;
+  width: 307px;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  color: black;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+}
+.pregled-korpe-proizvodi-item{
+
+  display: block;
+  position: relative;
+  width: 290px;
+  height: 30px;
+  top: 0px;
+  margin: 0 auto;
+  color: black;
+  border-bottom: 1px solid #e2e2e2;
+}
+.pregled-korpe-proizvodi-item-data{
+
+  display: block;
+  position: relative;
+  color: black;
+  font-size: 14pt;
+  top: 2px;
+}
+.posalji{
+
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 17%;
+  bottom: 0px;
+
+}
+.btn-pozicija{
+
+  position: relative;
+  top: 10px;
+  float: right;
+
+}

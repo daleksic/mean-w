@@ -1,0 +1,101 @@
+<div class="data" data-ng-controller="AdminiCtrl" data-ng-init="nadjiAdmine()">
+   <div class="admin-header">
+         <ul  class="admin-nav-tabs">
+                <li class=" admin_nav"  ng-click="ruta('/admin/kategorije')"><a data-toggle="tab" href="">Kategorije</a></li>
+                <li class="admin_nav "  ng-click="ruta('/admin/proizvodjaci')"><a ng-click="ruta('/admin/proizvodjaci')"  href="">Proizvođači</a></li>
+                <li class="admin_nav  "  ng-click="ruta('/admin/proizvodi')"><a ng-click="ruta('/admin/proizvodi')"  href="">Proizvodi</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/korisnici')"><a  ng-click="ruta('/admin/korisnici')" href="">Korisnici</a></li>
+                <li class="admin_nav active-tab"  ng-click="ruta('/admin/admini')"><a  ng-click="ruta('/admin/admini')" href="">Admini</a></li>
+            </ul>
+
+     </div>
+    <div class="admin-body">
+       <!-- <ul  class="admin-nav-menu">
+            <li   ng-click="setRoute('insert/category')"><a class="admin_menu"  href="#/dodavanje/kategorija">Kategorija</a></li>
+            <li  ng-click="setRoute('dodavanjeKategorije')"><a class="admin_menu"  href="#/dodavanje/proizvodjac">Proizvođač</a></li>
+            <li   ng-click="setRoute('dodavanjeProizvoda')"><a class="active-menu"   href="">Proizvod</a></li>
+            <li   ng-click="setRoute('view/categories')"><a  class="admin_menu"  href="">Pregled</a></li>
+        </ul> -->
+        <div class="admin-content">
+
+      <!--   <div class="admin-form">
+
+                <div class="admin-form-table"> -->
+
+
+                    <div class="form-admin" >
+                    <div class="form-admin-header"><h3>Dodavanje admina</h3></div>
+                       <div class="form-admin-body">
+                           <form ng-submit="dodajAdmina()">
+
+                               <div class="form-admin-body-form-item" data-ng-model="admin">
+                                   <div class="form-admin-body-form-item-top-placeholder">
+                                       <span class="top-placeholder" id="top-placeholder1" >Korisničko ime</span>
+                                   </div>
+                                   <input type="text" data-ng-model="admin.korisnickoIme" ng-change="proveriKorisnickoIme(admin.korisnickoIme)"  class="form-admin-body-form-item-input" id="korisnickoImeInput">
+                                   <div class="form-admin-body-form-item-validation-message"><span>{{korisnickoImePoruka}}</span></div>
+                               </div>
+
+                               <div class="form-admin-body-form-item">
+                                   <div class="form-admin-body-form-item-top-placeholder">
+                                       <span class="top-placeholder" id="top-placeholder1" >Lozinka</span>
+                                   </div>
+                                   <input type="password" data-ng-model="admin.lozinka" ng-change="proveriLozinku(admin.lozinka)"  class="form-admin-body-form-item-input" id="korisnickoImeInput">
+                                   <div class="form-admin-body-form-item-validation-message"><span>{{lozinkaPoruka}}</span></div>
+                               </div>
+
+
+
+                               <div class="form-admin-body-form-item">
+                                    <input type="submit" value="Dodati" class="form-admin-body-form-item-submit" id="bu">
+                                </div>
+                           </form>
+                       </div>
+                    </div>
+
+
+
+     <!--                 <div class="form-kategorija" data-ng-show="izmena">
+
+                       <div class="form-kategorija-body">
+                           <form action="" method="">
+
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder">
+                                       <span class="top-placeholder" id="top-placeholder1" >Naziv</span>
+                                   </div>
+                                   <input type="text" placeholder="Naziv" class="form-kategorija-body-form-item-input" id="korisnickoImeInput">
+                                   <div class="form-kategorija-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                               </div>
+
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder"><span>Velika fotografija</span></div>
+                                   <input type="file"  class="form-kategorija-body-form-item-input-file">
+                                   <div class="form-kategorija-body-form-item-validation-message">
+                                       <span>Input nije dobar</span>
+                                   </div>
+                               </div>
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder"><span>Mala fotografija</span></div>
+                                   <input type="file"  class="form-kategorija-body-form-item-input-file">
+                                   <div class="form-kategorija-body-form-item-validation-message">
+                                       <span>Input nije dobar</span>
+                                   </div>
+                               </div>
+                               <div class="form-kategorija-body-form-item">
+                                    <input type="submit" value="Izmeniti" class="form-kategorija-body-form-item-submit" id="bu">
+                                </div>
+                           </form>
+                       </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div> -->
+
+  <!--      </div>
+    </div> -->
+</div>

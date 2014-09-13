@@ -1,0 +1,62 @@
+<div  ng-if="proizvodiKorpa.length != 0" class="data" data-ng-controller="KorisnikKorpaCtrl" ng-init="ucitajKorpu()">
+    <div class="data-header">
+        <div class="data-image-title"> <img src="../img/web-shop/cart2.png" > <h2>Moja korpa</h2> <span>Proizvoda: <b>{{proizvodiKorpa.length}}</b></span></div>
+
+        <div class="clear-all"><span ng-click="ukloniSve()">Ukloniti sve</span></div>
+     </div>
+    <div class="data-body">
+
+        <div class="cart">
+            <div class="cart-items">
+
+                <div class="cart-items-head">
+                    <div class="cart-items-head-th"><span>Naziv</span></div>
+                    <div class="cart-items-head-th"><span>Jedinična cena</span></div>
+                    <div class="cart-items-head-th"><span>Količina</span></div>
+                    <div class="cart-items-head-th"><span>Cena</span></div>
+                    <div class="cart-items-head-th"><span>Ukloniti</span></div>
+                </div>
+                <div class="cart-items-body">
+                    <div class="cart-items-body-tr" ng-repeat="proizvod in proizvodiKorpa">
+                        <div class="cart-items-body-tr-th"><span>{{proizvod.naziv}}</span></div>
+                        <div class="cart-items-body-tr-th"><span>{{proizvod.jedinicnaCena}}</span></div>
+                        <div class="cart-items-body-tr-th"><span><input type="number" min="1" data-ng-model="proizvod.kolicina" class="cart-input" ng-change="promeniKolicinu($index, proizvod.kolicina)"></span></div>
+                        <div class="cart-items-body-tr-th"><span>{{proizvod.cena}}</span></div>
+                        <div class="cart-items-body-tr-th"> <span><i class="fa fa-times cart-remove" ng-click="ukloniProizvod($index)"></i> </span></div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="cart-total">
+
+                <div class="cart-total-price">
+                        <div class="cart-items-body-tr-th"><span></span></div>
+                        <div class="cart-items-body-tr-th"><span></span></div>
+                        <div class="cart-items-body-tr-th"><span>Ukupna cena:</span></div>
+                        <div class="cart-items-body-tr-th"><span class="total">{{total}}</span></div>
+                        <div class="cart-items-body-tr-th"> <span><button ng-disabled="proizvodiKorpa.length == 0" class="btn btn-success btn-sm btn-cart" ng-click="ruta('/narucivanje')">Naručite</button></span>  </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div  ng-if="proizvodiKorpa.length == 0" class="data" data-ng-controller="KorisnikKorpaCtrl" ng-init="ucitajKorpu()">
+    <div class="data-header">
+         <div class="data-image-title"> <img src="../img/web-shop/cart2.png" > <h2>Moja korpa</h2> <span>Proizvoda: <b>{{proizvodiKorpa.length}}</b></span></div>
+     </div>
+    <div class="data-body">
+        <div class="narudzbe">
+             <div class="narudzbe-zahvala">
+                    <div class="narudzbe-zahvala-wrapper">
+                        <h2>Korpa je prazna!</h2>
+                        <p><a href="/">Nazad na kupovinu</a></p>
+                    </div>
+             </div>
+        </div>
+    </div>
+</div>

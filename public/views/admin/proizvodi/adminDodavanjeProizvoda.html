@@ -1,0 +1,92 @@
+<div class="data" data-ng-controller="ProizvodiCtrl" data-ng-init="nadjiKategorijeIProizvodjace()">
+   <div class="admin-header">
+         <ul  class="admin-nav-tabs">
+                <li class=" admin_nav" ng-click="ruta('/admin/kategorije')"><a  href="" ng-click="ruta('/admin/kategorije')">Kategorije</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/proizvodjaci')"><a   href="" ng-click="ruta('/admin/proizvodjaci')">Proizvođači</a></li>
+                <li class="admin_nav  active-tab" ng-click="ruta('/admin/proizvodi')"><a   href="" ng-click="ruta('/admin/proizvodi')">Proizvodi</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/korisnici')"><a  ng-click="ruta('/admin/korisnici')" href="">Korisnici</a></li>
+                <li class="admin_nav "  ng-click="ruta('/admin/admini')"><a  ng-click="ruta('/admin/admini')" href="">Admini</a></li>
+            </ul>
+
+     </div>
+    <div class="admin-body">
+       <!-- <ul  class="admin-nav-menu">
+            <li   ng-click="setRoute('insert/category')"><a class="admin_menu"  href="#/dodavanje/kategorija">Kategorija</a></li>
+            <li  ng-click="setRoute('dodavanjeKategorije')"><a class="admin_menu"  href="#/dodavanje/proizvodjac">Proizvođač</a></li>
+            <li   ng-click="setRoute('dodavanjeProizvoda')"><a class="active-menu"   href="">Proizvod</a></li>
+            <li   ng-click="setRoute('view/categories')"><a  class="admin_menu"  href="">Pregled</a></li>
+        </ul> -->
+      <!--  <div class="admin-content">
+
+          <div class="admin-form"> -->
+
+                <div class="admin-form-table">
+
+                  <div class="form-proizvod" >
+                       <div class="form-proizvod-header"><h3>Dodavanje proizvoda</h3></div>
+                        <div class="form-proizvod-body">
+                            <form data-ng-submit="dodajProizvod()">
+
+                                <div class="form-proizvod-body-form-item" >
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Naziv</span></div>
+                                    <input type="text" data-ng-model="naziv" ng-change="proveriNaziv(naziv)"  class="form-proizvod-body-form-item-input" id="korisnickoImeInput">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>{{nazivPoruka}}</span></div>
+                                </div>
+
+                                <div class="form-proizvod-body-form-item-div-textarea">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Opis</span></div>
+                                    <textarea data-ng-model="opis" ng-change="proveriOpis(opis)"  class="form-proizvod-body-form-item-input-textarea" id="korisnickoImeInput"></textarea>
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>{{opisPoruka}}</span></div>
+                                </div>
+
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Cena</span></div>
+                                    <input type="text" data-ng-model="cena" ng-change="proveriCenu(cena)"  class="form-proizvod-body-form-item-input" id="korisnickoImeInput">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>{{cenaPoruka}}</span></div>
+                                </div>
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span>Velika fotografija</span></div>
+                                    <input type="file" file-model="velikaSlika"  accept="image/*"  class="form-proizvod-body-form-item-input-file">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>{{velikaSlikaPoruka}}</span></div>
+                                </div>
+
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span>Mala fotografija</span></div>
+                                    <input type="file" file-model="malaSlika"  accept="image/*"  class="form-proizvod-body-form-item-input-file">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>{{malaSlikaPoruka}}</span></div>
+                                </div>
+
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Proizvođač</span></div>
+                                    <select id="form-proizvod-body-form-item-select" data-ng-model="proizvodjacSelect"  ng-change="proveriProizvodjaca(proizvodjacSelect)"  ng-options="proizvodjac.naziv for proizvodjac in proizvodjaci">
+                                        <option value="">-- izaberite proizvođača --</option>
+                                    </select>
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>{{proizvodjacPoruka}}</span></div>
+                                </div>
+
+                              <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Kategorija</span></div>
+                                    <select id="form-proizvod-body-form-item-select" data-ng-model="kategorijaSelect" ng-change="proveriKategoriju(kategorijaSelect)"  ng-options="kategorija.naziv for kategorija in kategorije" >
+                                        <option value="">-- izaberite kategoriju --</option>
+                                    </select>
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>{{kategorijaPoruka}}</span></div>
+                                </div>
+
+                                <div class="form-proizvod-body-form-item">
+                                    <input type="submit" value="Dodati" class="form-proizvod-body-form-item-submit" id="bu">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+    <!--    </div>
+    </div> -->
+</div>

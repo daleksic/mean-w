@@ -1,0 +1,68 @@
+{% extends '../layouts/default.html' %}
+
+{% block content %}
+<div class="data">
+  <!--  <div class="data-header">
+        <h2 class="data-title">Prijava</h2>
+
+
+     </div>  -->
+
+     {% if message && message.length  %}
+     <div class="fade in alert alert-error poruka">
+         <button class="close" data-dismiss="alert">&times;</button>
+         <div class="strong">
+             {{ message }}
+         </div>
+     </div>
+     {% endif %}
+
+    <div class="data-body">
+
+        <div class="form-register">
+             <div class="form-register-header"><h3>Registracija</h3></div>
+             <div class="form-register-body">
+                <form action="/korisnici" method="post">
+
+                    <div class="form-register-body-form-item">
+                        <div class="form-register-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Ime</span></div>
+                        <input type="text" placeholder="Ime" name="ime" class="form-register-body-form-item-input" id="korisnickoImeInput">
+                        <div class="form-register-body-form-item-validation-message"><span></span></div>
+                    </div>
+
+                     <div class="form-register-body-form-item">
+                        <div class="form-register-body-form-item-top-placeholder"><span>Prezime</span></div>
+                        <input type="text" placeholder="Prezime" name="prezime" class="form-register-body-form-item-input">
+                        <div class="form-register-body-form-item-validation-message"><span></span></div>
+                    </div>
+
+
+                    <div class="form-register-body-form-item">
+                        <div class="form-register-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Korisnicko ime</span></div>
+                        <input type="text" placeholder="Korisnicko ime" name="korisnickoIme" class="form-register-body-form-item-input" id="korisnickoImeInput">
+                        <div class="form-register-body-form-item-validation-message"><span></span></div>
+                    </div>
+
+                     <div class="form-register-body-form-item">
+                        <div class="form-register-body-form-item-top-placeholder"><span>Lozinka</span></div>
+                        <input type="password" placeholder="Lozinka" name="lozinka" class="form-register-body-form-item-input">
+                        <div class="form-register-body-form-item-validation-message"><span></span></div>
+                    </div>
+
+                    <div class="form-register-body-form-item">
+                        <div class="form-register-body-form-item-top-placeholder"><span>Adresa</span></div>
+                        <input type="text" placeholder="Adresa" name="adresa" class="form-register-body-form-item-input">
+                        <div class="form-register-body-form-item-validation-message"><span></span></div>
+                    </div>
+
+                    <div class="form-register-body-form-item">
+                        <input type="submit" value="Registrujte se" class="form-register-body-form-item-submit" id="bu">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+       </div>
+</div>
+{% endblock %}

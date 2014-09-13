@@ -1,0 +1,34 @@
+<div class="data" data-ng-controller="ProizvodiKorisnikCtrl" data-ng-init="nadjiProizvodKategorije()">
+    <div class="data-header">
+         <div class="data-image-title"> <img ng-src="{{kategorija.malaSlika}}" > <h2>{{kategorija.naziv}}</h2> </div>
+      <!--  <div class="filter-div"><input type="text" placeholder="Filter proizvoda">  </div>   -->
+
+     </div>
+    <div class="data-body">
+        <div class="kategorije_link">
+            <h4>Kategorije</h4>
+            <a ng-repeat="kategorija2 in kategorije" data-ng-href="#!/kategorije/{{kategorija2._id}}" class="list-group-item" ng-class="activeClass(kategorija2._id)">{{kategorija2.naziv}}</a>
+
+
+        </div>
+        <div class="data-category-items">
+
+            <div class="product-image"> <div  class="product-image-imgcontainer"> <img ng-src="{{proizvod.velikaSlika}}" alt="image" id="product-image-imgcontainer-img" /></div></div>
+            <div class="product-info">
+                <div class="product-info-name"> <h2 class="product-name-h2">{{proizvod.naziv}}</h2> </div>
+                <div class="product-info-supplier"> <h4 class="product-supplier-h4">{{proizvod.proizvodjac.naziv}}</h4> </div>
+                <div class="product-info-description">
+
+                        <pre  class="product-info-description-pre">   {{proizvod.opis}}</pre>
+
+
+                </div>
+                <div class="product-info-price">
+
+                  <span class="product-info-price-span-wrapper"> <span class="product-info-price-span-wrapper-cena">Cena: <b>{{proizvod.cena}}</b></span> <button class="btn btn-success btn-sm product-info-price-span-wrapper-button" ng-click="dodajUKorpu(kolicina)" >Dodati u korpu</button> <input type="number" min="1"  data-ng-model="kolicina" ng-init="kolicina = 1" class="product-info-price-span-wrapper-input"> <span class="product-info-price-span-wrapper-kolicina">Količina:</span>     </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

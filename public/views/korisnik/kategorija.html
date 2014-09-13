@@ -1,0 +1,33 @@
+<div class="data" data-ng-controller="KategorijeKorisnikCtrl" data-ng-init="nadjiKategorijuIProizvode()">
+    <div class="data-header">
+         <div class="data-image-title"> <img src="{{kategorija.malaSlika}}" > <h2>{{kategorija.naziv}}</h2> </div>
+        <div class="filter-div"><input type="text" ng-model="searchProizvod.naziv" placeholder="Filter proizvoda">  </div>
+        <div class="filter-div">
+          <h4>Sortiranje:</h4>
+          <select  data-ng-model="sortSelect" ng-init="sortSelect = sort[0]" ng-options="s.naslov for s in sort" >
+
+          </select>
+        <!--  <input type="text" ng-model="searchProizvod.naziv" placeholder="Filter proizvoda2"> -->
+        </div>
+
+     </div>
+    <div class="data-body">
+        <div class="kategorije_link">
+            <h4>Kategorije</h4>
+            <a ng-repeat="kategorija2 in kategorije" data-ng-href="#!/kategorije/{{kategorija2._id}}" class="list-group-item" ng-class="activeClass(kategorija2._id)">{{kategorija2.naziv}}</a>
+
+        </div>
+        <div class="data-category-items">
+                <div class="data-item" ng-repeat="proizvod in proizvodi | filter: searchProizvod | orderBy:sortSelect.predikat:sortSelect.redosled">
+                   <div class="data-item-image">
+                      <a class="img_link" data-ng-href="#!/kategorije/{{kategorija._id}}/proizvodi/{{proizvod._id}}"><img ng-src="{{proizvod.malaSlika}}" class="data-item-img" ></a>
+                   </div>
+                   <div class="data-item-name"> <a class="item_link" data-ng-href="#!/kategorije/{{kategorija._id}}/proizvodi/{{proizvod._id}}">{{proizvod.naziv}}</a> </div>
+                    <div class="data-item-description"> <span class="description">{{'Cena: ' + proizvod.cena}}</span>  </div>
+                </div>
+
+        </div>
+
+
+       </div>
+</div>

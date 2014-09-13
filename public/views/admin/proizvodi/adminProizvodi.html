@@ -1,0 +1,208 @@
+<div class="data" data-ng-controller="ProizvodiCtrl" data-ng-init="nadjiProizvode()">
+   <div class="admin-header">
+         <ul  class="admin-nav-tabs">
+                <li class=" admin_nav" ng-click="ruta('/admin/kategorije')"><a data-toggle="tab" href="" ng-click="ruta('/admin/kategorije')">Kategorije</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/proizvodjaci')"><a data-toggle="tab"  href="" ng-click="ruta('/admin/proizvodjaci')">Proizvođači</a></li>
+                <li class="admin_nav  active-tab" ng-click="ruta('/admin/proizvodi')"><a data-toggle="tab"  href="" ng-click="ruta('/admin/proizvodi')">Proizvodi</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/korisnici')"><a  ng-click="ruta('/admin/korisnici')" href="">Korisnici</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/admini')"><a  ng-click="ruta('/admin/admini')" href="">Admini</a></li>
+            </ul>
+
+     </div>
+    <div class="admin-body">
+       <!-- <ul  class="admin-nav-menu">
+            <li   ng-click="setRoute('insert/category')"><a class="admin_menu"  href="#/dodavanje/kategorija">Kategorija</a></li>
+            <li  ng-click="setRoute('dodavanjeKategorije')"><a class="admin_menu"  href="#/dodavanje/proizvodjac">Proizvođač</a></li>
+            <li   ng-click="setRoute('dodavanjeProizvoda')"><a class="active-menu"   href="">Proizvod</a></li>
+            <li   ng-click="setRoute('view/categories')"><a  class="admin_menu"  href="">Pregled</a></li>
+        </ul> -->
+        <div class="admin-content">
+            <div class="proizvodi-table">
+
+                <div class="proizvod-filter">
+                 <button class="dodaj-proizvod-button" ng-click="ruta('/admin/proizvodi/dodavanje')" ng-class='aktivnoDodavanjeKlasa' ><i class="fa fa-plus"></i></button>
+                    <span>Ukupno proizvoda: {{proizvodi.length}}</span>
+                    <div class="filter-proizvoda"><input type="text" placeholder="Filter proizvoda" ng-model="searchProizvod">  </div>
+                </div>
+
+                <div class="proizvod-tabela">
+
+
+                    <div class="proizvodi">
+
+                        <div class="proizvodi-head">
+                            <div class="proizvodi-head-th"><span><b>Id</b></span></div>
+                            <div class="proizvodi-head-th"><span><b>Naziv</b></span></div>
+                            <div class="proizvodi-head-th"><span><b>Opis</b></span></div>
+                            <div class="proizvodi-head-th"><span><b>Cena</b></span></div>
+                            <div class="proizvodi-head-th"><span><b>Velika foto.</b></span></div>
+                            <div class="proizvodi-head-th"><span><b>Mala foto.</b></span></div>
+                            <div class="proizvodi-head-th"><span><b>Proizvođač</b></span></div>
+                            <div class="proizvodi-head-th"><span><b>Kategorija</b></span></div>
+                            <div class="proizvodi-head-th"><span><b>Pregled</b></span></div>
+                            <div class="proizvodi-head-th"><span><b>Izmeniti</b></span></div>
+                            <div class="proizvodi-head-th"><span><b>Izbrisati</b></span></div>
+                        </div>
+                        <div class="proizvodi-body">
+
+                            <div class="proizvodi-body-tr" data-ng-repeat="proizvod in proizvodi | filter: searchProizvod">
+                                <div class="proizvodi-body-tr-th"><span> {{proizvod._id}} </span></div>
+                                <div class="proizvodi-body-tr-th"><span>{{proizvod.naziv}}</span></div>
+                                <div class="proizvodi-body-tr-th"><span>{{proizvod.opis}}</span></div>
+                                <div class="proizvodi-body-tr-th"><span>{{proizvod.cena}}</span></div>
+                                <div class="proizvodi-body-tr-th"><span>{{proizvod.velikaSlika}}</span></div>
+                                <div class="proizvodi-body-tr-th"><span>{{proizvod.malaSlika}}</span></div>
+                                <div class="proizvodi-body-tr-th"><span>{{proizvod.proizvodjac.naziv}}</span></div>
+                                 <div class="proizvodi-body-tr-th"><span>{{proizvod.kategorija.naziv}}</span></div>
+                                 <div class="proizvodi-body-tr-th"> <span><a data-ng-href="#!/admin/proizvodi/{{proizvod._id}}"><i class="fa fa-eye proizvodi-hover" ></i> </a> </span></div>
+                                 <div class="proizvodi-body-tr-th"> <span><a data-ng-href="#!/admin/proizvodi/{{proizvod._id}}/izmena"><i class="fa fa-refresh proizvodi-hover"></i> </a></span></div>
+                                <div class="proizvodi-body-tr-th"> <span><i ng-click="izbrisiProizvod(proizvod._id)" class="fa fa-times proizvodi-remove"></i> </span></div>
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+          <!--  <div class="admin-form">
+                <div class="admin-form-buttons">
+                    <div class="div-buttons">
+                         <button class="dodaj-proizvod-button" ng-click="dodavanjeProizvoda()" ng-class='aktivnoDodavanjeKlasa' ><i class="fa fa-plus"></i></button>
+                        <button class="izmeni-proizvod-button" ng-click="izmenaProizvoda()" ng-class='aktivnoIzmenaKlasa'><i class="fa fa-refresh"></i></button>
+                        <button class="pregled-proizvod-button" ng-click="pregledProizvoda()" ng-class='aktivnoPregledKlasa'><i class="fa fa-eye"></i></button>
+
+                        <button class="obrisi-polja-proizvod-button "><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="admin-form-table">
+                    <div class="form-proizvod" data-ng-show="izmena">
+                       <div class="form-proizvod-header"><h3>Izmena proizvoda</h3></div>
+                        <div class="form-proizvod-body">
+                            <form action="" method="">
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Naziv</span></div>
+                                    <input type="text" placeholder="Naziv" class="form-proizvod-body-form-item-input" id="korisnickoImeInput">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+                                <div class="form-proizvod-body-form-item-div-textarea">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Opis</span></div>
+                                    <textarea t placeholder="Opis" class="form-proizvod-body-form-item-input-textarea" id="korisnickoImeInput"></textarea>
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Cena</span></div>
+                                    <input type="text" placeholder="Cena" class="form-proizvod-body-form-item-input" id="korisnickoImeInput">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span>Velika fotografija</span></div>
+                                    <input type="file"  class="form-proizvod-body-form-item-input-file">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span>Mala fotografija</span></div>
+                                    <input type="file"  class="form-proizvod-body-form-item-input-file">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Proizvođač</span></div>
+                                    <select id="form-proizvod-body-form-item-select">
+                                        <option>Here is the first option</option>
+                                        <option>The second option</option>
+                                    </select>
+
+                                </div>
+
+
+
+                                <div class="form-proizvod-body-form-item">
+                                    <input type="submit" value="Izmeniti" class="form-proizvod-body-form-item-submit" id="bu">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-proizvod" data-ng-show="dodavanje">
+                       <div class="form-proizvod-header"><h3>Izmena proizvoda</h3></div>
+                        <div class="form-proizvod-body">
+                            <form action="" method="">
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Naziv</span></div>
+                                    <input type="text" placeholder="Naziv" class="form-proizvod-body-form-item-input" id="korisnickoImeInput">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+                                <div class="form-proizvod-body-form-item-div-textarea">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Opis</span></div>
+                                    <textarea t placeholder="Opis" class="form-proizvod-body-form-item-input-textarea" id="korisnickoImeInput"></textarea>
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Cena</span></div>
+                                    <input type="text" placeholder="Cena" class="form-proizvod-body-form-item-input" id="korisnickoImeInput">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span>Velika fotografija</span></div>
+                                    <input type="file"  class="form-proizvod-body-form-item-input-file">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span>Mala fotografija</span></div>
+                                    <input type="file"  class="form-proizvod-body-form-item-input-file">
+                                    <div class="form-proizvod-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+
+                                <div class="form-proizvod-body-form-item">
+                                    <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Proizvođač</span></div>
+                                    <select id="form-proizvod-body-form-item-select">
+                                        <option>Here is the first option</option>
+                                        <option>The second option</option>
+                                    </select>
+
+                                </div>
+
+
+
+                                <div class="form-proizvod-body-form-item">
+                                    <input type="submit" value="Dodati" class="form-proizvod-body-form-item-submit" id="bu">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div> -->
+
+        </div>
+    </div>
+</div>

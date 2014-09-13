@@ -1,0 +1,142 @@
+<div class="data" data-ng-controller="ProizvodjaciCtrl" data-ng-init="nadjiProizovdjace()">
+   <div class="admin-header">
+         <ul  class="admin-nav-tabs">
+                <li class=" admin_nav"  ng-click="ruta('/admin/kategorije')"><a  href="" ng-click="ruta('/admin/kategorije')">Kategorije</a></li>
+                <li class="admin_nav active-tab"  ng-click="ruta('/admin/proizvodjaci')"><a  href="" ng-click="ruta('/admin/proizvodjaci')">Proizvođači</a></li>
+                <li class="admin_nav  "  ng-click="ruta('/admin/proizvodi')"><a ng-click="ruta('/admin/proizvodi')"  href="" >Proizvodi</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/korisnici')"><a  ng-click="ruta('/admin/korisnici')" href="">Korisnici</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/admini')"><a  ng-click="ruta('/admin/admini')" href="">Admini</a></li>
+            </ul>
+
+     </div>
+    <div class="admin-body">
+       <!-- <ul  class="admin-nav-menu">
+            <li   ng-click="setRoute('insert/category')"><a class="admin_menu"  href="#/dodavanje/kategorija">Kategorija</a></li>
+            <li  ng-click="setRoute('dodavanjeKategorije')"><a class="admin_menu"  href="#/dodavanje/proizvodjac">Proizvođač</a></li>
+            <li   ng-click="setRoute('dodavanjeProizvoda')"><a class="active-menu"   href="">Proizvod</a></li>
+            <li   ng-click="setRoute('view/categories')"><a  class="admin_menu"  href="">Pregled</a></li>
+        </ul> -->
+        <div class="admin-content">
+            <div class="proizvodjaci-table">
+
+                <div class="proizvodjac-filter">
+                    <button class="dodaj-proizvodjaca-button" ng-click="ruta('/admin/proizvodjaci/dodavanje')" >
+                        <i class="fa fa-plus"></i>
+                    </button>
+                    <span>Ukupno proizvođača: {{proizvodjaci.length}}</span>
+                    <div class="filter-proizvodjaca"><input type="text" ng-model="searchProizvodjaci" placeholder="Filter proizvođača">  </div>
+                </div>
+
+                <div class="proizvodjac-tabela">
+
+
+                    <div class="proizvodjaci">
+
+                        <div class="proizvodjaci-head">
+                            <div class="proizvodjaci-head-th"><span><b>Id</b></span></div>
+                            <div class="proizvodjaci-head-th"><span><b>Naziv</b></span></div>
+                            <div class="proizvodjaci-head-th"><span><b>Adresa</b></span></div>
+                             <div class="proizvodjaci-head-th"><span><b>Pregled</b></span></div>
+                             <div class="proizvodjaci-head-th"><span><b>Izmeniti</b></span></div>
+                            <div class="proizvodjaci-head-th"><span><b>Izbrisati</b></span></div>
+
+                        </div>
+                        <div class="proizvodjaci-body">
+
+                            <div class="proizvodjaci-body-tr" data-ng-repeat="proizvodjac in proizvodjaci | filter:searchProizvodjaci">
+                                <div class="proizvodjaci-body-tr-th"><span>{{proizvodjac._id}}</span></div>
+                                <div class="proizvodjaci-body-tr-th"><span>{{proizvodjac.naziv}}</span></div>
+                                <div class="proizvodjaci-body-tr-th"><span>{{proizvodjac.adresa}}</span></div>
+                                 <div class="proizvodjaci-body-tr-th"> <span><a data-ng-href="#!/admin/proizvodjaci/{{proizvodjac._id}}"><i  class="fa fa-eye proizvodjaci-hover" ></i> </a></span></div>
+                                  <div class="proizvodjaci-body-tr-th"> <span><a data-ng-href="#!/admin/proizvodjaci/{{proizvodjac._id}}/izmena"><i class="fa fa-refresh proizvodjaci-hover" ></i></a> </span> </span></div>
+                                <div class="proizvodjaci-body-tr-th"> <span><i ng-click="izbrisiProizvodjaca(proizvodjac._id)" class="fa fa-times proizvodjaci-remove"></i> </span></div>
+                            </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        <!--    <div class="admin-form">
+                <div class="admin-form-buttons">
+                    <div class="div-buttons">
+                         <button class="dodaj-proizvodjaca-button" ng-click="dodavanjeProizvodjaca()" ng-class='aktivnoDodavanjeKlasa' >
+                             <i class="fa fa-plus"></i>
+                        </button>
+                        <button class="izmeni-proizvodjaca-button" ng-click="izmenaProizvodjaca()" ng-class='aktivnoIzmenaKlasa'>
+                            <i class="fa fa-refresh"></i>
+                        </button>
+                        <button class="pregled-proizvodjaca-button" ng-click="pregledProizvodjaca()" ng-class='aktivnoPregledKlasa'>
+                            <i class="fa fa-eye"></i>
+                        </button>
+
+                        <button class="obrisi-polja-proizvodjaca-button "><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="admin-form-table">
+
+
+                    <div class="form-proizvodjac" data-ng-show="dodavanje">
+                        <div class="form-proizvodjac-header"><h3>Dodavanje proizvodjaca</h3></div>
+                        <div class="form-proizvodjac-body">
+                            <form action="" method="">
+
+                                <div class="form-proizvodjac-body-form-item">
+                                    <div class="form-proizvodjac-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Naziv</span></div>
+                                    <input type="text" placeholder="Naziv" class="form-proizvodjac-body-form-item-input" id="korisnickoImeInput">
+                                    <div class="form-proizvodjac-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+                                <div class="form-proizvodjac-body-form-item">
+                                    <div class="form-proizvodjac-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Adresa</span></div>
+                                    <input type="text" placeholder="Adresa" class="form-proizvodjac-body-form-item-input" id="korisnickoImeInput">
+                                    <div class="form-proizvodjac-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+                                <div class="form-proizvodjac-body-form-item">
+                                    <input type="submit" value="Dodati" class="form-proizvodjac-body-form-item-submit" id="bu">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                     <div class="form-proizvodjac" data-ng-show="izmena">
+                      <div class="form-proizvodjac-header"><h3>Dodavanje proizvodjaca</h3></div>
+                        <div class="form-proizvodjac-body">
+                            <form action="" method="">
+
+                                <div class="form-proizvodjac-body-form-item">
+                                    <div class="form-proizvodjac-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Naziv</span></div>
+                                    <input type="text" placeholder="Naziv" class="form-proizvodjac-body-form-item-input" id="korisnickoImeInput">
+                                    <div class="form-proizvodjac-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+                                <div class="form-proizvodjac-body-form-item">
+                                    <div class="form-proizvodjac-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Adresa</span></div>
+                                    <input type="text" placeholder="Adresa" class="form-proizvodjac-body-form-item-input" id="korisnickoImeInput">
+                                    <div class="form-proizvodjac-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                                </div>
+
+                                <div class="form-proizvodjac-body-form-item">
+                                    <input type="submit" value="Izmeniti" class="form-proizvodjac-body-form-item-submit" id="bu">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div> -->
+
+        </div>
+    </div>
+</div>

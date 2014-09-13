@@ -1,0 +1,81 @@
+<div class="data" data-ng-controller="ProizvodiCtrl" data-ng-init="nadjiProizvodKategorijeProizvodjace()">
+   <div class="admin-header">
+         <ul  class="admin-nav-tabs">
+                <li class=" admin_nav" ng-click="ruta('/admin/kategorije')"><a  href="" ng-click="ruta('/admin/kategorije')">Kategorije</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/proizvodjaci')"><a   href="" ng-click="ruta('/admin/proizvodjaci')">Proizvođači</a></li>
+                <li class="admin_nav  active-tab" ng-click="ruta('/admin/proizvodi')"><a   href="" ng-click="ruta('/admin/proizvodi')">Proizvodi</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/korisnici')"><a  ng-click="ruta('/admin/korisnici')" href="">Korisnici</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/admini')"><a  ng-click="ruta('/admin/admini')" href="">Admini</a></li>
+            </ul>
+
+     </div>
+     <div class="admin-body" >
+
+       <div class="admin-form-table">
+         <div class="form-proizvod" >
+           <div class="form-proizvod-header"><h3>Izmena proizvoda</h3></div>
+           <div class="form-proizvod-body">
+             <form ng-submit="izmeniProizvod()">
+
+               <div class="form-proizvod-body-form-item">
+                 <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Naziv</span></div>
+                 <input type="text"  data-ng-model="proizvod.naziv" ng-change="proveriNazivIzmena(proizvod.naziv)" class="form-proizvod-body-form-item-input" id="korisnickoImeInput">
+                 <div class="form-proizvod-body-form-item-validation-message"><span>{{nazivIzmenaPoruka}}</span></div>
+               </div>
+
+               <div class="form-proizvod-body-form-item-div-textarea">
+                 <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Opis</span></div>
+                 <textarea   data-ng-model="proizvod.opis" ng-change="proveriOpisIzmena(proizvod.opis)" class="form-proizvod-body-form-item-input-textarea" id="korisnickoImeInput"></textarea>
+                 <div class="form-proizvod-body-form-item-validation-message"><span>{{opisIzmenaPoruka}}</span></div>
+               </div>
+
+
+               <div class="form-proizvod-body-form-item">
+                 <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Cena</span></div>
+                 <input type="text"  data-ng-model="proizvod.cena" ng-change="proveriCenuIzmena(proizvod.cena)" class="form-proizvod-body-form-item-input" id="korisnickoImeInput">
+                 <div class="form-proizvod-body-form-item-validation-message"><span>{{cenaIzmenaPoruka}}</span></div>
+               </div>
+
+               <div class="form-proizvod-body-form-item">
+                 <div class="form-proizvod-body-form-item-top-placeholder"><span>Velika fotografija</span></div>
+                 <input type="file" file-model="velikaSlikaIzmena"  class="form-proizvod-body-form-item-input-file">
+                 <div class="form-proizvod-body-form-item-validation-message"><span>{{velikaSlikaIzmenaPoruka}}</span></div>
+               </div>
+
+
+               <div class="form-proizvod-body-form-item">
+                 <div class="form-proizvod-body-form-item-top-placeholder"><span>Mala fotografija</span></div>
+                 <input type="file" file-model="malaSlikaIzmena"  class="form-proizvod-body-form-item-input-file">
+                 <div class="form-proizvod-body-form-item-validation-message"><span>{{malaSlikaIzmenaPoruka}}</span></div>
+               </div>
+
+
+               <div class="form-proizvod-body-form-item">
+                 <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Proizvođač</span></div>
+                 <select  id="form-proizvod-body-form-item-select"  data-ng-model="proizvodjacSelectIzmena" ng-change="proveriProizvodjacaIzmena(proizvodjacSelectIzmena)"  ng-options="p as p.naziv for p in proizvodjaciIzmena" >
+                       <option value="">-- izaberite proizvođača --</option>
+                 </select>
+                 <div class="form-proizvod-body-form-item-validation-message"><span>{{proizvodjacIzmenaPoruka.naziv}}</span></div>
+               </div>
+
+               <div class="form-proizvod-body-form-item" ng-model='kategorijaModel'>
+
+                 <div class="form-proizvod-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Kategorija</span></div>
+                 <select id="form-proizvod-body-form-item-select" data-ng-model="kategorijaSelectIzmena" ng-change="proveriKategorijuIzmena(kategorijaSelectIzmena)"    ng-options="kategorija as kategorija.naziv for kategorija in kategorijeIzmena"  >
+                      <option value="">-- izaberite kategoriju --</option>
+                 </select>
+                <div class="form-proizvod-body-form-item-validation-message"><span>{{kategorijaIzmenaPoruka.naziv}}</span></div>
+               </div>
+
+
+
+               <div class="form-proizvod-body-form-item">
+                 <input type="submit" value="Izmeniti" class="form-proizvod-body-form-item-submit" id="bu">
+               </div>
+             </form>
+           </div>
+         </div>
+       </div>
+     </div>
+
+</div>

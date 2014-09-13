@@ -1,0 +1,166 @@
+<div class="data" data-ng-controller="KategorijeCtrl" data-ng-init="nadjiKategorije()">
+   <div class="admin-header">
+         <ul  class="admin-nav-tabs">
+                <li class=" admin_nav active-tab"  ng-click="ruta('/admin/kategorije')"><a data-toggle="tab" href="">Kategorije</a></li>
+                <li class="admin_nav "  ng-click="ruta('/admin/proizvodjaci')"><a ng-click="ruta('/admin/proizvodjaci')"  href="">Proizvođači</a></li>
+                <li class="admin_nav  "  ng-click="ruta('/admin/proizvodi')"><a ng-click="ruta('/admin/proizvodi')" href="">Proizvodi</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/korisnici')"><a  ng-click="ruta('/admin/korisnici')" href="">Korisnici</a></li>
+                <li class="admin_nav "  ng-click="ruta('/admin/admini')"><a  ng-click="ruta('/admin/admini')" href="">Admini</a></li>
+            </ul>
+
+     </div>
+    <div class="admin-body">
+       <!-- <ul  class="admin-nav-menu">
+            <li   ng-click="setRoute('insert/category')"><a class="admin_menu"  href="#/dodavanje/kategorija">Kategorija</a></li>
+            <li  ng-click="setRoute('dodavanjeKategorije')"><a class="admin_menu"  href="#/dodavanje/proizvodjac">Proizvođač</a></li>
+            <li   ng-click="setRoute('dodavanjeProizvoda')"><a class="active-menu"   href="">Proizvod</a></li>
+            <li   ng-click="setRoute('view/categories')"><a  class="admin_menu"  href="">Pregled</a></li>
+        </ul> -->
+        <div class="admin-content">
+            <div class="kategorije-table">
+
+                <div class="kategorija-filter">
+                    <button class="dodaj-kategoriju-button" ng-click="ruta('/admin/kategorije/dodavanje')" ng-class='aktivnoDodavanjeKlasa' >
+                        <i class="fa fa-plus"></i>
+                    </button>
+                    <span>Ukupno kategorija: {{kategorije.length}}</span>
+                    <div class="filter-kategorije"><input type="text" ng-model="searchKategorije" placeholder="Filter kategorija">  </div>
+                </div>
+
+                <div class="kategorija-tabela">
+
+
+                    <div class="kategorije">
+
+                        <div class="kategorije-head">
+                            <div class="kategorije-head-th"><span><b>Id</b></span></div>
+                            <div class="kategorije-head-th"><span><b>Naziv</b></span></div>
+                            <div class="kategorije-head-th"><span><b>Velika foto.</b></span></div>
+                            <div class="kategorije-head-th"><span><b>Mala foto.</b></span></div>
+                             <div class="kategorije-head-th"><span><b>Pregled</b></span></div>
+                             <div class="kategorije-head-th"><span><b>Izmeniti</b></span></div>
+                            <div class="kategorije-head-th"><span><b>Izbrisati</b></span></div>
+
+                        </div>
+                        <div class="kategorije-body">
+
+                            <div class="kategorije-body-tr" data-ng-repeat="kategorija in kategorije | filter: searchKategorije">
+                                <div class="kategorije-body-tr-th"><span>{{kategorija._id}}</span></div>
+                                <div class="kategorije-body-tr-th"><span>{{kategorija.naziv}}</span></div>
+                                <div class="kategorije-body-tr-th"><span>{{kategorija.velikaSlika}}</span></div>
+                                <div class="kategorije-body-tr-th"><span>{{kategorija.malaSlika}}</span></div>
+                                  <div class="kategorije-body-tr-th"> <span><a data-ng-href="#!/admin/kategorije/{{kategorija._id}}"><i class="fa fa-eye kategorije-hover"></i></a> </span></div>
+                               <div class="kategorije-body-tr-th"> <span><a data-ng-href="#!/admin/kategorije/{{kategorija._id}}/izmena"><i class="fa fa-refresh kategorije-hover" ></i></a> </span></div>
+                                <div class="kategorije-body-tr-th"> <span><i ng-click="izbrisiKategoriju(kategorija._id)" class="fa fa-times kategorije-remove"></i> </span></div>
+                            </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+          <!--  <div class="admin-form">
+                <div class="admin-form-buttons">
+                    <div class="div-buttons">
+                         <button class="dodaj-kategoriju-button" ng-click="dodavanjeKategorije()" ng-class='aktivnoDodavanjeKlasa' >
+                             <i class="fa fa-plus"></i>
+                        </button>
+                        <button class="izmeni-kategoriju-button" ng-click="izmenaKategorije()" ng-class='aktivnoIzmenaKlasa'>
+                            <i class="fa fa-refresh"></i>
+                        </button>
+                        <button class="pregled-kategorije-button" ng-click="pregledKategorije()" ng-class='aktivnoPregledKlasa'>
+                            <i class="fa fa-eye"></i>
+                        </button>
+
+                        <button class="obrisi-polja-kategorije-button "><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="admin-form-table">
+
+
+                    <div class="form-kategorija" data-ng-show="dodavanje">
+
+                       <div class="form-kategorija-body">
+                           <form action="" method="">
+
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder">
+                                       <span class="top-placeholder" id="top-placeholder1" >Naziv</span>
+                                   </div>
+                                   <input type="text" placeholder="Naziv" class="form-kategorija-body-form-item-input" id="korisnickoImeInput">
+                                   <div class="form-kategorija-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                               </div>
+
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder"><span>Velika fotografija</span></div>
+                                   <input type="file"  class="form-kategorija-body-form-item-input-file">
+                                   <div class="form-kategorija-body-form-item-validation-message">
+                                       <span>Input nije dobar</span>
+                                   </div>
+                               </div>
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder"><span>Mala fotografija</span></div>
+                                   <input type="file"  class="form-kategorija-body-form-item-input-file">
+                                   <div class="form-kategorija-body-form-item-validation-message">
+                                       <span>Input nije dobar</span>
+                                   </div>
+                               </div>
+                               <div class="form-kategorija-body-form-item">
+                                    <input type="submit" value="Dodati" class="form-kategorija-body-form-item-submit" id="bu">
+                                </div>
+                           </form>
+                       </div>
+                    </div>
+
+
+
+                      <div class="form-kategorija" data-ng-show="izmena">
+
+                       <div class="form-kategorija-body">
+                           <form action="" method="">
+
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder">
+                                       <span class="top-placeholder" id="top-placeholder1" >Naziv</span>
+                                   </div>
+                                   <input type="text" placeholder="Naziv" class="form-kategorija-body-form-item-input" id="korisnickoImeInput">
+                                   <div class="form-kategorija-body-form-item-validation-message"><span>Input nije dobar</span></div>
+                               </div>
+
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder"><span>Velika fotografija</span></div>
+                                   <input type="file"  class="form-kategorija-body-form-item-input-file">
+                                   <div class="form-kategorija-body-form-item-validation-message">
+                                       <span>Input nije dobar</span>
+                                   </div>
+                               </div>
+                               <div class="form-kategorija-body-form-item">
+                                   <div class="form-kategorija-body-form-item-top-placeholder"><span>Mala fotografija</span></div>
+                                   <input type="file"  class="form-kategorija-body-form-item-input-file">
+                                   <div class="form-kategorija-body-form-item-validation-message">
+                                       <span>Input nije dobar</span>
+                                   </div>
+                               </div>
+                               <div class="form-kategorija-body-form-item">
+                                    <input type="submit" value="Izmeniti" class="form-kategorija-body-form-item-submit" id="bu">
+                                </div>
+                           </form>
+                       </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div> -->
+
+        </div>
+    </div>
+</div>

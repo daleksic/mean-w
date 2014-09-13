@@ -1,0 +1,602 @@
+.admin-header{
+     display: block;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+
+  /*  border-bottom: 1px solid gray;*/
+    box-sizing: border-box;
+}
+.admin-body{
+     display: block;
+    position: relative;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-y: auto;
+
+}
+.admin-nav-tabs{
+      display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+/*    background-color: gray;*/
+    list-style-type: none;
+
+}
+
+.admin_nav{
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    line-height: 50px;
+    top: 0;
+    left: 0;
+   /*   border: 1px solid gray;*/
+    float:left;
+    text-align: center;
+ /*   vertical-align: middle;*/
+}
+.admin_nav a{
+    font-size: 18pt;
+    text-decoration: none;
+    color:  #428bca;
+}
+.admin_nav:hover{
+
+     background-color: lightgray;
+    cursor: pointer;
+
+}
+.admin_nav a:hover{
+     color:  #428bca;
+    cursor: inherit;
+}
+.active-tab{
+
+     background-color: white;
+}
+.active-menu{
+
+
+     display: inline-block;
+    position: relative;
+    width: 25%;
+    height: 10%;
+    line-height: 40px;
+    top: 0;
+    left: 0;
+   /*   border: 1px solid gray;*/
+    float:left;
+    text-align: center;
+ /*   vertical-align: middle;*/
+      font-size: 14pt;
+    text-decoration: none;
+      background-color: #428bca;
+    color: white;
+/*  border-bottom: 1px solid #428bca;*/
+}
+.admin-nav-menu{
+
+       display: block;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+/*    background-color: gray;*/
+    list-style-type: none;
+ /*    border-bottom: 1px solid #428bca;*/
+}
+.admin_menu{
+
+      display: inline-block;
+    position: relative;
+    width: 25%;
+    height: 10%;
+    line-height: 40px;
+    top: 0;
+    left: 0;
+   /*   border: 1px solid gray;*/
+    float:left;
+    text-align: center;
+ /*   vertical-align: middle;*/
+      font-size: 14pt;
+    text-decoration: none;
+    color: #428bca;
+/*  border-bottom: 1px solid #428bca;*/
+
+}
+.admin_menu:hover{
+      background-color: #428bca;
+    cursor: pointer;
+    text-decoration: none;
+    color:  white;
+}
+.active-menu:hover{
+      background-color: #428bca;
+    cursor: pointer;
+    text-decoration: none;
+    color:  white;
+}
+/*.admin_menu a{
+    font-size: 14pt;
+    text-decoration: none;
+    color:  #428bca;
+}*/
+.admin-content{
+
+       display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  /*  background-color: gray;*/
+    overflow-y: auto;
+}
+
+
+.proizvodjaci-table{
+
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+  /*  background-color: gray;*/
+
+}
+.admin-form{
+
+     display: inline-block;
+    position: relative;
+    width: 32%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+  /*  background-color: gray;*/
+}
+.form-proizvodjac{
+
+     display: block;
+   position: relative;
+    width: 100%;
+    height: 100%;
+     overflow: hidden;
+   top: 00px;
+   margin: 0 auto;
+     background-color: white;
+    padding-top: 5px;
+
+ /*     border: 1px solid #e2e2e2;*/
+
+
+}
+.form-proizvodjac-header{
+
+      display: block;
+   position: relative;
+    width: 380px;
+    height: 50px;
+     overflow: hidden;
+   top: 0px;
+   margin: 0 auto;
+   /*  background-color: #e2e2e2;*/
+    border-bottom: 1px solid #e2e2e2;
+}
+.form-proizvodjac-body{
+
+       display: block;
+   position: relative;
+    width: 100%;
+    height: 280px;
+     overflow: hidden;
+   top: 0px;
+   margin: 0 auto;
+ /*   padding-top: 20px;*/
+/*  background-color: #e2e2e2;*/
+
+}
+.form-proizvodjac-body-form-item{
+
+   display: block;
+   position: relative;
+    width: 300px;
+    height: 90px;
+     overflow: hidden;
+   top: 20px;
+   margin: 0 auto;
+  /*   background-color: #e2e2e2;*/
+   /* border:  1px solid gray;*/
+
+}
+.form-proizvodjac-body-form-item-submit{
+
+    display: block;
+    position: relative;
+     background-color:  #428bca;
+    border: none;
+    color: white;
+    width: 290px;
+    height: 40px;
+    margin: 0 auto;
+    top: 10px;
+}
+.form-proizvodjac-body-form-item-submit:hover{
+
+
+     background-color:  #4791cf;
+
+}
+/*.form-login-body-form-item-input:active{
+
+     border: none;
+    border-bottom: 2px solid gray;
+}*/
+.form-proizvodjac-body-form-item-input{
+
+      display: block;
+    position: relative;
+    width: 290px;
+    top: 0;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14pt;
+    border: none;
+    border-bottom: 2px solid lightgray;
+}
+.form-kategorija-body-form-item-pregledDiv{
+      display: block;
+    position: relative;
+    width: 290px;
+    top: 0;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14pt;
+    border: none;
+
+}
+.form-proizvodjac-body-form-item-input:focus::-webkit-input-placeholder { color:transparent;}
+.form-proizvodjac-body-form-item-input:focus::-moz-placeholder { color:transparent; }
+.form-proizvodjac-body-form-item-input:focus{
+   border-bottom: 2px solid #428bca;
+    outline: 0;
+}
+
+
+
+.form-proizvodjac-body-form-item-top-placeholder{
+
+     display: block;
+    position: relative;
+  /*   background-color:  red;*/
+    top: 0;
+    margin: 0 auto;
+    color: white;
+    width: 290px;
+    height: 20px;
+}
+.form-proizvodjac-body-form-item-validation-message{
+
+     display: block;
+    position: relative;
+   /*  background-color:  red;*/
+    top: 0;
+    margin: 0 auto;
+    color: white;
+    width: 290px;
+    height: 20px;
+}
+.form-proizvodjac-body-form-item-top-placeholder span{
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height:  100%;
+    font-size: 11pt;
+    color: #428bca;
+    overflow: hidden;
+
+}
+.form-proizvodjac-body-form-item-validation-message span{
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height:  100%;
+    font-size: 11pt;
+    color: red;
+    overflow: hidden;
+}
+.form-proizvodjac-header h3{
+
+    position: relative;
+    left: 5px;
+    top: 10px;
+    color: gray;
+    margin: 0;
+}
+.form-proizvodjac-body-form-item-input-file{
+
+      display: block;
+    position: relative;
+    width: 290px;
+    top: 0;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14pt;
+    border: none;
+
+}
+/*.top-placeholder{
+     display: block;
+    position: relative;
+    width: 100%;
+    height:  100%;
+    font-size: 11pt;
+    color: #428bca;
+    overflow: hidden;
+
+}*/
+
+
+.proizvodjac-filter{
+
+
+     display: block;
+   position: relative;
+    width: 100%;
+    height: 10%;
+     overflow: hidden;
+   top: 0px;
+   margin: 0 auto;
+  border-bottom: 1px solid #e2e2e2;
+
+}
+.proizvodjac-tabela{
+
+
+     display: block;
+   position: relative;
+    width: 100%;
+    height: 90%;
+     overflow: hidden;
+   top: 0px;
+   margin: 0 auto;
+ }
+.proizvodjaci{
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+ /*  background-color: #f1e5f2;*/
+}
+.proizvodjaci-head{
+   display: block;
+   position: relative;
+    width: 100%;
+    height: 10%;
+     overflow: hidden;
+
+   /*  background-color: red;*/
+
+}
+.proizvodjaci-body-tr{
+   display: block;
+   position: relative;
+    width: 100%;
+    height: 40px;
+     overflow: hidden;
+   border-bottom: 1px solid #e2e2e2;
+   /*  background-color: red;*/
+
+}
+.proizvodjaci-body{
+   display: block;
+   position: relative;
+    width: 100%;
+    height: 90%;
+     overflow-y: auto;
+     background-color: white;
+    color: gray;
+}
+
+.proizvodjaci-head-th{
+
+    display: block;
+    position: relative;
+    width: 16%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+}
+.proizvodjaci-head-th span{
+
+    position: relative;
+    top: 23%;
+
+}
+.proizvodjaci-body-tr-th span{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 25px;
+    top: 10px;
+   padding-left: 5px;
+     overflow: hidden;
+    text-overflow: clip;
+
+}
+.proizvodjaci-body-tr-th{
+
+     display: block;
+    position: relative;
+    width: 16%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+    overflow: hidden;
+
+}
+
+.proizvodjaci-remove{
+
+   color: gray;
+    font-size: 16pt;
+}
+.proizvodjaci-remove:hover{
+
+   color: red;
+   cursor: pointer;
+}
+.proizvodjaci-hover{
+
+   color: gray;
+    font-size: 16pt;
+}
+.proizvodjaci-hover:hover{
+
+   color: #428bca;
+   cursor: pointer;
+}
+.proizvodjaci-input{
+
+    width: 60px;
+    font-size: 8pt;
+}
+.admin-form-buttons{
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+  /*  background-color: red;*/
+}
+.admin-form-table{
+     display: block;
+    position: relative;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
+ /*   background-color: green;*/
+
+}
+.dodaj-proizvodjaca-button{
+   position: relative;
+    width: 40px;
+    height: 40px;
+   top: 3px;
+    left: 3px;
+    border: none;
+    background-color: #e2e2e2;
+
+
+    color: #080808;
+
+}
+.izmeni-proizvodjaca-button{
+   position: relative;
+    width: 40px;
+    height: 40px;
+
+    left: 5px;
+    border: none;
+    background-color: #e2e2e2;
+
+
+    color: #080808;
+}
+.pregled-proizvodjaca-button{
+  position: relative;
+    width: 40px;
+    height: 40px;
+
+    left: 10px;
+    border: none;
+    background-color: #e2e2e2;
+
+
+    color: #080808;
+
+}
+.obrisi-polja-proizvodjaca-button{
+
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    float: right;
+    right: 1px;
+    border: none;
+    background-color: #e2e2e2;
+    color: #080808;
+}
+.div-buttons{
+
+    display: block;
+     position: absolute;
+     width: 100%;
+     height: 40px;
+     bottom: 0;
+   /*  background-color: green;*/
+}
+.dodaj-proizvodjaca-button:hover, .izmeni-proizvod-button:hover, .pregled-proizvod-button:hover, .obrisi-polja-proizvod-button:hover{
+
+    background-color: #428bca;
+     color: white;
+}
+.activeButton{
+    background-color: #428bca;
+     color: white;
+
+}
+.dodaj-proizvodjaca-button:focus, .izmeni-proizvod-button:focus, .pregled-proizvod-button:focus, .obrisi-polja-proizvod-button:focus{
+ /*  border: 2px solid #428bca;*/
+    outline: 0;
+}
+.proizvodjac-filter span{
+    position: relative;
+    left: 5px;
+    top: 0px;
+   color: gray;
+
+}
+.filter-proizvodjaca{
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: 10px;
+    right: 10px;
+
+}
+.filter-proizvodjaca input{
+
+    width: 250px;
+    font-family: sans-serif;
+    font-size: 14pt;
+}

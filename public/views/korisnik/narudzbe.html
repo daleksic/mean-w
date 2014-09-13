@@ -1,0 +1,63 @@
+<div class="data" data-ng-controller="KorisnikNarudzbeCtrl" data-ng-init="ucitajNarudzbe()">
+    <div class="data-header">
+        <div class="data-image-title"> <img src="../img/web-shop/narudzbe.png" > <h2>Narudžbe</h2></div>
+     </div>
+    <div class="data-body">
+        <div class="narudzbe">
+            <div class="narudzbe-wrapper1">
+                <div class="narudzbe-container">
+                    <div class="narudzbe-items">
+                        <div class="narudzbe-items-header">
+                            <div class="narudzbe-items-header-item-no"><span class="naslov-narudzba">#</span></div>
+                            <div class="narudzbe-items-header-item-vreme"><span class="naslov-narudzba">Vreme</span></div>
+                            <div class="narudzbe-items-header-item-datum"><span class="naslov-narudzba">Datum</span></div>
+                            <div class="narudzbe-items-header-item-nacin"><span class="naslov-narudzba">Način plaćanja</span></div>
+                            <div class="narudzbe-items-header-item-cena"><span class="naslov-narudzba">Cena</span></div>
+                            <div class="narudzbe-items-header-item-adresa"><span class="naslov-narudzba">Adresa</span></div>
+                        </div>
+                        <div class="narudzbe-items-body">
+                            <div class="narudzbe-items-wrapper">
+                                <div class="narudzbe-items-scroll">
+                                    <div class="narudzbe-items-scroll-tr tr-hover" ng-repeat="narudzba in narudzbe" ng-click="prikaziProizvode(narudzba._id, $index)" ng-class="rowOrders[{{$index}}] && 'tr-active' || ''">
+                                        <div class="narudzbe-items-scroll-td-no"><span class="naslov-td" ng-class="rowsCells[{{$index}}] && 'span-active' || ''">{{$index + 1 + '.'}}</span></div>
+                                        <div class="narudzbe-items-scroll-td-vreme"><span class="naslov-td" ng-class="rowsCells[{{$index}}] && 'span-active' || ''">{{narudzba.datum | date:'HH:mm'}}</span></div>
+                                        <div class="narudzbe-items-scroll-td-datum"><span class="naslov-td" ng-class="rowsCells[{{$index}}] && 'span-active' || ''">{{narudzba.datum | date:'dd/MM/yyyy'}}</span></div>
+                                        <div class="narudzbe-items-scroll-td-nacin"><span class="naslov-td" ng-class="rowsCells[{{$index}}] && 'span-active' || ''">{{narudzba.nacinPlacanja}}</span></div>
+                                        <div class="narudzbe-items-scroll-td-cena"><span class="naslov-td" ng-class="rowsCells[{{$index}}] && 'span-active' || ''">{{narudzba.ukupnaCena}}</span></div>
+                                        <div class="narudzbe-items-scroll-td-adresa"><span class="naslov-td" ng-class="rowsCells[{{$index}}] && 'span-active' || ''">{{narudzba.adresa}}</span></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="narudzbe-wrapper2">
+                <div class="narudzbe-proizvodi">
+                    <div class="narudzbe-proizvodi-tabela">
+                          <div class="narudzbe-items-header">
+                              <div class="narudzbe-proizvodi-items-header-item-naziv"><span class="naslov-narudzba">Naziv</span></div>
+                              <div class="narudzbe-proizvodi-items-header-item-jed"><span class="naslov-narudzba">Jed. cena</span></div>
+                              <div class="narudzbe-proizvodi-items-header-item-kol"><span class="naslov-narudzba">Kol.</span></div>
+                              <div class="narudzbe-proizvodi-items-header-item-subcena"><span class="naslov-narudzba">Cena</span></div>
+                          </div>
+                          <div class="narudzbe-items-body">
+                              <div class="narudzbe-items-wrapper">
+                                  <div class="narudzbe-items-scroll">
+                                      <div class="narudzbe-items-scroll-tr" ng-repeat="naruceniProizvod in naruceniProizvodi">
+                                          <div class="narudzbe-items-scroll-td-naziv"><span class="naslov-td">{{naruceniProizvod.proizvod.naziv}}</span></div>
+                                          <div class="narudzbe-items-scroll-td-jed"><span class="naslov-td">{{naruceniProizvod.cenaProizvoda}}</span></div>
+                                          <div class="narudzbe-items-scroll-td-kol"><span class="naslov-td">{{naruceniProizvod.kolicina}}</span></div>
+                                          <div class="narudzbe-items-scroll-td-subcena"><span class="naslov-td">{{naruceniProizvod.cenaProizvoda * naruceniProizvod.kolicina}}</span></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

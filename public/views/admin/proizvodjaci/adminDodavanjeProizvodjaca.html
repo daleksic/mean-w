@@ -1,0 +1,42 @@
+<div class="data" data-ng-controller="ProizvodjaciCtrl">
+   <div class="admin-header">
+         <ul  class="admin-nav-tabs">
+                <li class=" admin_nav"  ng-click="ruta('/admin/kategorije')"><a  href="" ng-click="ruta('/admin/kategorija')">Kategorije</a></li>
+                <li class="admin_nav active-tab"  ng-click="ruta('/admin/proizvodjaci')"><a   href="" ng-click="ruta('/admin/proizvodjaci')">Proizvođači</a></li>
+                <li class="admin_nav  "  ng-click="ruta('/admin/proizvodi')"><a   href="" ng-click="ruta('/admin/proizvod')">Proizvodi</a></li>
+                <li class="admin_nav"  ng-click="ruta('/admin/korisnici')"><a  ng-click="ruta('/admin/korisnici')" href="">Korisnici</a></li>
+                <li class="admin_nav "  ng-click="ruta('/admin/admini')"><a  ng-click="ruta('/admin/admini')" href="">Admini</a></li>
+            </ul>
+
+     </div>
+     <div class="admin-body">
+       <div class="admin-content">
+         <div class="form-proizvodjac" >
+           <div class="form-proizvodjac-header"><h3>Dodavanje proizvodjača</h3></div>
+           <div class="form-proizvodjac-body">
+               <form   data-ng-submit="dodavanjeProizvodjaca()">
+
+                   <div class="form-proizvodjac-body-form-item" data-ng-model="proizvodjac">
+                     <div class="form-proizvodjac-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1">Naziv</span></div>
+                     <input type="text" data-ng-model="proizvodjac.naziv" ng-change="proveriNaziv(proizvodjac.naziv)"   class="form-proizvodjac-body-form-item-input" id="korisnickoImeInput">
+                     <div class="form-proizvodjac-body-form-item-validation-message"><span>{{nazivPoruka}}</span></div>
+                   </div>
+
+                   <div class="form-proizvodjac-body-form-item">
+                     <div class="form-proizvodjac-body-form-item-top-placeholder"><span class="top-placeholder" id="top-placeholder1" >Adresa</span></div>
+                     <input type="text" data-ng-model="proizvodjac.adresa" ng-change="proveriAdresu(proizvodjac.adresa)"   class="form-proizvodjac-body-form-item-input" id="korisnickoImeInput">
+                     <div class="form-proizvodjac-body-form-item-validation-message"><span>{{adresaPoruka}}</span></div>
+                   </div>
+
+                   <div class="form-proizvodjac-body-form-item">
+                     <input type="submit" value="Dodati" class="form-proizvodjac-body-form-item-submit" >
+                   </div>
+               </form>
+           </div>
+         </div>
+
+       </div>
+
+     </div>
+
+</div>

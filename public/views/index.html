@@ -1,0 +1,23 @@
+<!--<section data-ng-controller="IndexController">
+	<h1>Ovo je pocetna strana, mean!</h1>
+</section> -->
+ <div class="data" data-ng-controller="IndexKorisnikCtrl" data-ng-init="nadjiKategorije()">
+    <div class="data-header">
+        <h2 class="data-title">Kategorije</h2>
+        <div class="filter-div"><input type="text" ng-model="searchKategorija.naziv" placeholder="Filter kategorija">  </div>
+
+     </div>
+    <div class="data-body">
+
+        <div class="data-item" ng-repeat="kategorija in kategorije | filter: searchKategorija">
+           <div class="data-item-image">
+              <a class="img_link" data-ng-href="#!/kategorije/{{kategorija._id}}"><img ng-src="{{kategorija.velikaSlika}}"class="data-item-img" ></a>
+           </div>
+           <div class="data-item-name"> <a class="item_link" data-ng-href="#!/kategorije/{{kategorija._id}}">{{kategorija.naziv}}</a> </div>
+          <!--  <div class="data-item-description"> <span class="description">Proizvodi: 12</span>  </div> -->
+        </div>
+
+
+
+       </div>
+</div>
