@@ -2,7 +2,6 @@
 
 // User routes use users controller
 var admins = require('../controllers/admins');
-var busboy = require('connect-busboy');
 var fs = require('fs');
 var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart();
@@ -29,7 +28,7 @@ module.exports = function(app, passport) {
         fs.renameSync(oldPath, newPath, function(err) {
                 if(err) console.error(err.stack);
             });
-  
+
 
    });
 
