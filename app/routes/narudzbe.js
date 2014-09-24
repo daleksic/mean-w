@@ -14,9 +14,6 @@ var hasAuthorization = function(req, res, next) {
 
 module.exports = function(app) {
 
-  /*  app.get('/korisnik/:korisnikId/narudzbe', narudzbe.all);
-    app.post('/narucivanje', authorization.requiresLogin, narudzbe.create);
-    app.get('/korisnik/:korisnikId/narudzbe/:narudzbaId', narudzbe.show);*/
 
     app.get('/narudzbe', narudzbe.all);
     app.post('/narudzbe', authorization.requiresLogin, narudzbe.create);

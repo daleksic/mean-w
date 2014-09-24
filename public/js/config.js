@@ -8,30 +8,7 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
 
     // states for my app
     $stateProvider
-  /*    .state('all articles', {
-        url: '/articles',
-        templateUrl: 'views/articles/list.html'
-    })
-      .state('create article', {
-        url: '/articles/create',
-        templateUrl: 'views/articles/create.html'
-    })
-      .state('edit article', {
-        url: '/articles/:articleId/edit',
-        templateUrl: 'views/articles/edit.html'
-    })
-      .state('article by id', {
-        url: '/articles/:articleId',
-        templateUrl: 'views/articles/view.html'
-    })*/
-    /* .state('prijava', {
-        url: '/prijava',
-        templateUrl: 'views/users/prijava.html'
-    })
-     .state('registracija', {
-        url: '/registracija',
-        templateUrl: 'views/users/registracija.html'
-    })*/
+
     .state('korisnik narudzbe', {
         url: '/korisnik/:korisnikId/narudzbe',
         templateUrl: 'views/korisnik/narudzbe.html',
@@ -59,14 +36,6 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
       url: '/narucivanje/zahvalnica',
       templateUrl: 'views/korisnik/hvala.html'
   })
-   /*  .state('dodavanje kategorije', {
-        url: '/dodavanje/kategorija',
-        templateUrl: 'views/admin/dodavanjeKategorije.html'
-    })
-     .state('dodavanje proizvodjaca', {
-        url: '/dodavanje/proizvodjac',
-        templateUrl: 'views/admin/dodavanjeProizvodjaca.html'
-    })*/
     .state('admin korisnici', {
        url: '/admin/korisnici',
        templateUrl: 'views/admin/korisnici/adminKorisnici.html'
@@ -135,7 +104,6 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
         url: '/',
         templateUrl: 'views/index.html',
         controller: 'IndexKorisnikCtrl'
-        //   templateUrl: 'viewsadmin/adminKategorije.html'
     });
 }
 ]);

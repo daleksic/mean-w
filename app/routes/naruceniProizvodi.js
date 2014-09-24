@@ -14,9 +14,6 @@ var hasAuthorization = function(req, res, next) {
 
 module.exports = function(app) {
 
-/*    app.get('/korisnik/:korisnikId/narudzbe', naruceniProizvodi.all);
-    app.post('/narucivanje', authorization.requiresLogin, naruceniProizvodi.create);
-    app.get('/korisnik/:korisnikId/narudzbe/:narudzbaId', naruceniProizvodi.show);*/
 
     app.get('/naruceniProizvodi', naruceniProizvodi.all);
     app.post('/naruceniProizvodi', authorization.requiresLogin, naruceniProizvodi.create);
